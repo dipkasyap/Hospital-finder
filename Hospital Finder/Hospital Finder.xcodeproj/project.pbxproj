@@ -29,6 +29,12 @@
 		8497BE6D249B338D006C6FAA /* SelectPainLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE6C249B338D006C6FAA /* SelectPainLevelVC.swift */; };
 		8497BE6F249B36B8006C6FAA /* PainLevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE6E249B36B8006C6FAA /* PainLevelButton.swift */; };
 		8497BE72249B3AA5006C6FAA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE71249B3AA5006C6FAA /* Common.swift */; };
+		8497BE74249B4342006C6FAA /* PainLevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE73249B4342006C6FAA /* PainLevelViewModel.swift */; };
+		8497BE76249B4A3F006C6FAA /* HospitalListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE75249B4A3F006C6FAA /* HospitalListModel.swift */; };
+		8497BE7C249B4CC9006C6FAA /* HospitalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE7B249B4CC9006C6FAA /* HospitalListViewModel.swift */; };
+		8497BE7F249B4D86006C6FAA /* HospitalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE7E249B4D86006C6FAA /* HospitalViewModel.swift */; };
+		8497BE83249B52E8006C6FAA /* HospitalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE81249B52E8006C6FAA /* HospitalCell.swift */; };
+		8497BE84249B52E8006C6FAA /* HospitalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8497BE82249B52E8006C6FAA /* HospitalCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +62,12 @@
 		8497BE6C249B338D006C6FAA /* SelectPainLevelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPainLevelVC.swift; sourceTree = "<group>"; };
 		8497BE6E249B36B8006C6FAA /* PainLevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelButton.swift; sourceTree = "<group>"; };
 		8497BE71249B3AA5006C6FAA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		8497BE73249B4342006C6FAA /* PainLevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelViewModel.swift; sourceTree = "<group>"; };
+		8497BE75249B4A3F006C6FAA /* HospitalListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalListModel.swift; sourceTree = "<group>"; };
+		8497BE7B249B4CC9006C6FAA /* HospitalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalListViewModel.swift; sourceTree = "<group>"; };
+		8497BE7E249B4D86006C6FAA /* HospitalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewModel.swift; sourceTree = "<group>"; };
+		8497BE81249B52E8006C6FAA /* HospitalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalCell.swift; sourceTree = "<group>"; };
+		8497BE82249B52E8006C6FAA /* HospitalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +136,9 @@
 		8497BE45249AC07E006C6FAA /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				8497BE5D249AE59D006C6FAA /* IllnessListViewModel.swift */,
-				8497BE66249B05FE006C6FAA /* IllnessViewModel.swift */,
+				8497BE77249B4C6B006C6FAA /* Illness */,
+				8497BE78249B4C7B006C6FAA /* Pain level */,
+				8497BE7D249B4CCF006C6FAA /* Hospital */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -133,7 +146,8 @@
 		8497BE46249AC090006C6FAA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8497BE5B249AD00F006C6FAA /* IllnessModel.swift */,
+				8497BE7A249B4C91006C6FAA /* Illness */,
+				8497BE79249B4C89006C6FAA /* Hospital */,
 				8497BE71249B3AA5006C6FAA /* Common.swift */,
 			);
 			path = Models;
@@ -181,6 +195,7 @@
 		8497BE4F249AC5FD006C6FAA /* Tableview Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8497BE80249B52E8006C6FAA /* Hospital Cell */,
 				8497BE50249AC637006C6FAA /* Illness Cell */,
 			);
 			path = "Tableview Cells";
@@ -201,6 +216,57 @@
 				8497BE6E249B36B8006C6FAA /* PainLevelButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		8497BE77249B4C6B006C6FAA /* Illness */ = {
+			isa = PBXGroup;
+			children = (
+				8497BE5D249AE59D006C6FAA /* IllnessListViewModel.swift */,
+				8497BE66249B05FE006C6FAA /* IllnessViewModel.swift */,
+			);
+			path = Illness;
+			sourceTree = "<group>";
+		};
+		8497BE78249B4C7B006C6FAA /* Pain level */ = {
+			isa = PBXGroup;
+			children = (
+				8497BE73249B4342006C6FAA /* PainLevelViewModel.swift */,
+			);
+			path = "Pain level";
+			sourceTree = "<group>";
+		};
+		8497BE79249B4C89006C6FAA /* Hospital */ = {
+			isa = PBXGroup;
+			children = (
+				8497BE75249B4A3F006C6FAA /* HospitalListModel.swift */,
+			);
+			path = Hospital;
+			sourceTree = "<group>";
+		};
+		8497BE7A249B4C91006C6FAA /* Illness */ = {
+			isa = PBXGroup;
+			children = (
+				8497BE5B249AD00F006C6FAA /* IllnessModel.swift */,
+			);
+			path = Illness;
+			sourceTree = "<group>";
+		};
+		8497BE7D249B4CCF006C6FAA /* Hospital */ = {
+			isa = PBXGroup;
+			children = (
+				8497BE7B249B4CC9006C6FAA /* HospitalListViewModel.swift */,
+				8497BE7E249B4D86006C6FAA /* HospitalViewModel.swift */,
+			);
+			path = Hospital;
+			sourceTree = "<group>";
+		};
+		8497BE80249B52E8006C6FAA /* Hospital Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8497BE81249B52E8006C6FAA /* HospitalCell.swift */,
+				8497BE82249B52E8006C6FAA /* HospitalCell.xib */,
+			);
+			path = "Hospital Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +330,7 @@
 				8497BE3C249ABFFA006C6FAA /* LaunchScreen.storyboard in Resources */,
 				8497BE39249ABFFA006C6FAA /* Assets.xcassets in Resources */,
 				8497BE53249AC637006C6FAA /* IllnessCell.xib in Resources */,
+				8497BE84249B52E8006C6FAA /* HospitalCell.xib in Resources */,
 				8497BE37249ABFF9006C6FAA /* Hospital.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +342,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8497BE83249B52E8006C6FAA /* HospitalCell.swift in Sources */,
 				8497BE5E249AE59D006C6FAA /* IllnessListViewModel.swift in Sources */,
+				8497BE74249B4342006C6FAA /* PainLevelViewModel.swift in Sources */,
 				8497BE4A249AC132006C6FAA /* HospitalListVC.swift in Sources */,
 				8497BE5A249ACC00006C6FAA /* AppConstants.swift in Sources */,
 				8497BE60249AFDC7006C6FAA /* TableView+Extension.swift in Sources */,
@@ -290,9 +359,12 @@
 				8497BE5C249AD00F006C6FAA /* IllnessModel.swift in Sources */,
 				8497BE6D249B338D006C6FAA /* SelectPainLevelVC.swift in Sources */,
 				8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */,
+				8497BE7F249B4D86006C6FAA /* HospitalViewModel.swift in Sources */,
 				8497BE58249ACBA2006C6FAA /* APIService.swift in Sources */,
 				8497BE56249AC6C7006C6FAA /* TableviewCell+Extension.swift in Sources */,
 				8497BE67249B05FE006C6FAA /* IllnessViewModel.swift in Sources */,
+				8497BE7C249B4CC9006C6FAA /* HospitalListViewModel.swift in Sources */,
+				8497BE76249B4A3F006C6FAA /* HospitalListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

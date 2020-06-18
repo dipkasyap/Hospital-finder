@@ -98,7 +98,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ye4-0F-f1d"/>
                     <connections>
-                        <outlet property="illnessTableView" destination="fFc-E7-Pen" id="2A1-xE-nku"/>
+                        <outlet property="hospitalsTableView" destination="fFc-E7-Pen" id="00X-cR-t6r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWi-1c-lHz" sceneMemberID="firstResponder"/>
@@ -202,6 +202,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2yW-dy-518"/>
                     <connections>
+                        <outlet property="illnessLabel" destination="41h-U7-Q0m" id="bsD-8U-rh9"/>
                         <outletCollection property="painLevelButtons" destination="uQl-C2-Xuq" collectionClass="NSMutableArray" id="ki1-fK-3Bb"/>
                         <outletCollection property="painLevelButtons" destination="Nzc-aJ-rYk" collectionClass="NSMutableArray" id="ndq-73-b50"/>
                         <outletCollection property="painLevelButtons" destination="HI8-ic-Pmo" collectionClass="NSMutableArray" id="LTh-Cx-Z94"/>

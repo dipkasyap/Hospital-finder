@@ -51,13 +51,7 @@ class IllnessListViewModel {
                 if let illnessModel = illnessData.illnesses {
                     self?.illnesses = illnessModel.map{IllnessViewModel($0)}
                 }
-                
                 then(true, nil)
-                
-                //                if let delegate = self?.delegate {
-//                    delegate.addWeatherDidSave(vm: weatherVM)
-//                    self?.dismiss(animated: true, completion: nil)
-//                }
                 
             } else {
                 //error

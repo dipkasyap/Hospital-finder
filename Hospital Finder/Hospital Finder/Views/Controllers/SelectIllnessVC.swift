@@ -57,8 +57,8 @@ extension SelectIllnessVC {
 //MARK:- Actions
 extension SelectIllnessVC {
     fileprivate func checkPainLevel(forIllness illness: IllnessViewModel  ) {
-        let hospitalListVC: SelectPainLevelVC = UIStoryboard(storyboard: .hospital).instantiateViewController()
-        navigationController?.pushViewController(hospitalListVC, animated: true)
+        let selectPainLevelVC = SelectPainLevelVC.load(with: illness)
+        navigationController?.pushViewController(selectPainLevelVC, animated: true)
     }
 }
 
