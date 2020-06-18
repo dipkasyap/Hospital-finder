@@ -17,18 +17,18 @@
                     <rect key="frame" x="0.0" y="8" width="398" height="67"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illness" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRz-ax-OdP">
-                            <rect key="frame" x="8" y="16" width="43" height="35"/>
+                            <rect key="frame" x="8" y="16" width="239" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.54886978860000002" green="0.55291134119999996" blue="0.55686062569999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xx min" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQz-Hb-NrX">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="xx min" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQz-Hb-NrX">
                             <rect key="frame" x="345.5" y="24.5" width="44.5" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.54886978860000002" green="0.55291134119999996" blue="0.55686062569999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waitine time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-vC-hy5">
+                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Waitine time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ym-vC-hy5">
                             <rect key="frame" x="255" y="24.5" width="84.5" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.54886978860000002" green="0.55291134119999996" blue="0.55686062569999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -43,7 +43,7 @@
                         <constraint firstAttribute="bottom" secondItem="sRz-ax-OdP" secondAttribute="bottom" constant="16" id="f4c-If-pvB"/>
                         <constraint firstAttribute="trailing" secondItem="CQz-Hb-NrX" secondAttribute="trailing" constant="8" id="p7J-hd-8jE"/>
                         <constraint firstItem="8ym-vC-hy5" firstAttribute="centerY" secondItem="bq7-nh-UZl" secondAttribute="centerY" id="uzf-K3-Y4Q"/>
-                        <constraint firstItem="8ym-vC-hy5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sRz-ax-OdP" secondAttribute="trailing" priority="250" constant="8" id="v7I-cK-x4r"/>
+                        <constraint firstItem="8ym-vC-hy5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sRz-ax-OdP" secondAttribute="trailing" constant="8" id="v7I-cK-x4r"/>
                         <constraint firstItem="CQz-Hb-NrX" firstAttribute="centerY" secondItem="bq7-nh-UZl" secondAttribute="centerY" id="vJw-7X-EZ6"/>
                     </constraints>
                 </view>
