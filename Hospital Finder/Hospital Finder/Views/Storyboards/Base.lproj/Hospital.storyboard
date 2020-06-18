@@ -19,7 +19,7 @@
                                 <rect key="frame" x="20" y="175" width="374" height="687"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an illness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzk-Qm-0MP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an illness:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzk-Qm-0MP">
                                 <rect key="frame" x="20" y="118" width="374" height="27"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="textColor"/>
@@ -45,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="811.59420289855075" y="101.78571428571428"/>
+            <point key="canvasLocation" x="830" y="102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dr2-Cl-SEz">
@@ -66,32 +66,160 @@
             <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
         </scene>
         <!--Hospital ListVC-->
-        <scene sceneID="FAH-56-GZv">
+        <scene sceneID="xAJ-WJ-Dyg">
             <objects>
-                <viewController storyboardIdentifier="HospitalListVC" id="A5A-wp-bfD" customClass="HospitalListVC" customModule="Hospital_Finder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vk5-Fe-PwB">
+                <viewController storyboardIdentifier="HospitalListVC" id="O1u-Cj-gih" customClass="HospitalListVC" customModule="Hospital_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a2t-Va-2Zx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bKL-EP-8gY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fFc-E7-Pen">
+                                <rect key="frame" x="20" y="131" width="374" height="731"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our suggested Hospitals:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGh-oc-aY2">
+                                <rect key="frame" x="20" y="74" width="374" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.96052604909999995" green="0.96448701619999999" blue="0.98095923659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.96052604909999995" green="0.96448701619999999" blue="0.98095923659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hJr-Za-WmF" firstAttribute="bottom" secondItem="bKL-EP-8gY" secondAttribute="bottom" id="2hD-lZ-pHi"/>
-                            <constraint firstItem="bKL-EP-8gY" firstAttribute="top" secondItem="hJr-Za-WmF" secondAttribute="top" id="YMe-Nh-o4B"/>
-                            <constraint firstItem="bKL-EP-8gY" firstAttribute="leading" secondItem="hJr-Za-WmF" secondAttribute="leading" id="lta-WM-Tf1"/>
-                            <constraint firstItem="hJr-Za-WmF" firstAttribute="trailing" secondItem="bKL-EP-8gY" secondAttribute="trailing" id="zVI-6s-WCe"/>
+                            <constraint firstItem="fFc-E7-Pen" firstAttribute="top" secondItem="oGh-oc-aY2" secondAttribute="bottom" constant="30" id="5Mo-gy-nvJ"/>
+                            <constraint firstItem="fFc-E7-Pen" firstAttribute="leading" secondItem="QDM-4W-QXT" secondAttribute="leading" constant="20" id="8jP-Ke-LIp"/>
+                            <constraint firstItem="QDM-4W-QXT" firstAttribute="bottom" secondItem="fFc-E7-Pen" secondAttribute="bottom" id="II4-1I-HBo"/>
+                            <constraint firstItem="oGh-oc-aY2" firstAttribute="top" secondItem="QDM-4W-QXT" secondAttribute="top" constant="30" id="RNc-lk-So6"/>
+                            <constraint firstItem="oGh-oc-aY2" firstAttribute="leading" secondItem="fFc-E7-Pen" secondAttribute="leading" id="SM9-9b-OLr"/>
+                            <constraint firstItem="QDM-4W-QXT" firstAttribute="trailing" secondItem="oGh-oc-aY2" secondAttribute="trailing" constant="20" id="fxu-Pr-XOi"/>
+                            <constraint firstItem="QDM-4W-QXT" firstAttribute="trailing" secondItem="fFc-E7-Pen" secondAttribute="trailing" constant="20" id="n0f-og-FxU"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hJr-Za-WmF"/>
+                        <viewLayoutGuide key="safeArea" id="QDM-4W-QXT"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SNT-2Z-pKS"/>
+                    <navigationItem key="navigationItem" id="Ye4-0F-f1d"/>
+                    <connections>
+                        <outlet property="hospitalsTableView" destination="fFc-E7-Pen" id="00X-cR-t6r"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="67A-Bi-p8T" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWi-1c-lHz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="96"/>
+            <point key="canvasLocation" x="2162" y="102"/>
+        </scene>
+        <!--Select Pain LevelVC-->
+        <scene sceneID="50n-Wr-nO8">
+            <objects>
+                <viewController storyboardIdentifier="SelectPainLevelVC" id="5gk-59-j2s" customClass="SelectPainLevelVC" customModule="Hospital_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OeG-cG-Cyp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illness" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41h-U7-Q0m">
+                                <rect key="frame" x="20" y="110.5" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.54886978860000002" green="0.55291134119999996" blue="0.55686062569999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select severity level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUq-I8-R7C">
+                                <rect key="frame" x="20" y="74" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.96052604909999995" green="0.96448701619999999" blue="0.98095923659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ol4-C2-8gT">
+                                <rect key="frame" x="20" y="410.5" width="374" height="85"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Luy-vt-KjK">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="85"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzc-aJ-rYk" customClass="PainLevelButton" customModule="Hospital_Finder" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="85"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Nzc-aJ-rYk" secondAttribute="height" multiplier="0.82" id="hJG-ML-xb4"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="0"/>
+                                                <connections>
+                                                    <action selector="didSelectPainLevel:" destination="5gk-59-j2s" eventType="touchUpInside" id="OfH-lk-w3c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjN-TW-0oZ" customClass="PainLevelButton" customModule="Hospital_Finder" customModuleProvider="target">
+                                                <rect key="frame" x="76" y="0.0" width="70" height="85"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" backgroundImage="1"/>
+                                                <connections>
+                                                    <action selector="didSelectPainLevel:" destination="5gk-59-j2s" eventType="touchUpInside" id="qt0-sw-CFT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bj8-Ew-kID" customClass="PainLevelButton" customModule="Hospital_Finder" customModuleProvider="target">
+                                                <rect key="frame" x="152" y="0.0" width="70" height="85"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" backgroundImage="2"/>
+                                                <connections>
+                                                    <action selector="didSelectPainLevel:" destination="5gk-59-j2s" eventType="touchUpInside" id="F4M-q5-QhF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI8-ic-Pmo" customClass="PainLevelButton" customModule="Hospital_Finder" customModuleProvider="target">
+                                                <rect key="frame" x="228" y="0.0" width="70" height="85"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" backgroundImage="3"/>
+                                                <connections>
+                                                    <action selector="didSelectPainLevel:" destination="5gk-59-j2s" eventType="touchUpInside" id="bkO-qm-p5v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQl-C2-Xuq" customClass="PainLevelButton" customModule="Hospital_Finder" customModuleProvider="target">
+                                                <rect key="frame" x="304" y="0.0" width="70" height="85"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" backgroundImage="4"/>
+                                                <connections>
+                                                    <action selector="didSelectPainLevel:" destination="5gk-59-j2s" eventType="touchUpInside" id="C8G-1y-CSi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Luy-vt-KjK" secondAttribute="bottom" id="iIj-fr-6Gu"/>
+                                    <constraint firstItem="Luy-vt-KjK" firstAttribute="top" secondItem="Ol4-C2-8gT" secondAttribute="top" id="jH8-os-5sf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Luy-vt-KjK" secondAttribute="trailing" id="lPA-MN-xuH"/>
+                                    <constraint firstItem="Luy-vt-KjK" firstAttribute="leading" secondItem="Ol4-C2-8gT" secondAttribute="leading" id="oK8-YI-wTF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96052604909999995" green="0.96448701619999999" blue="0.98095923659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="41h-U7-Q0m" firstAttribute="leading" secondItem="TUq-I8-R7C" secondAttribute="leading" id="3R1-TR-Sms"/>
+                            <constraint firstItem="d13-9J-f1o" firstAttribute="trailing" secondItem="Ol4-C2-8gT" secondAttribute="trailing" constant="20" id="9Dg-7v-G1o"/>
+                            <constraint firstItem="TUq-I8-R7C" firstAttribute="top" secondItem="d13-9J-f1o" secondAttribute="top" constant="30" id="ESU-8h-oRN"/>
+                            <constraint firstItem="41h-U7-Q0m" firstAttribute="top" secondItem="TUq-I8-R7C" secondAttribute="bottom" constant="10" id="Eam-h8-aqU"/>
+                            <constraint firstItem="TUq-I8-R7C" firstAttribute="leading" secondItem="d13-9J-f1o" secondAttribute="leading" constant="20" id="OgS-xf-6RK"/>
+                            <constraint firstItem="Ol4-C2-8gT" firstAttribute="centerY" secondItem="d13-9J-f1o" secondAttribute="centerY" id="SeY-og-9WK"/>
+                            <constraint firstItem="41h-U7-Q0m" firstAttribute="trailing" secondItem="TUq-I8-R7C" secondAttribute="trailing" id="ZrQ-jX-4q7"/>
+                            <constraint firstItem="Ol4-C2-8gT" firstAttribute="leading" secondItem="d13-9J-f1o" secondAttribute="leading" constant="20" id="buI-te-ksr"/>
+                            <constraint firstItem="d13-9J-f1o" firstAttribute="trailing" secondItem="TUq-I8-R7C" secondAttribute="trailing" constant="20" id="tSk-90-Ztd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d13-9J-f1o"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2yW-dy-518"/>
+                    <connections>
+                        <outlet property="illnessLabel" destination="41h-U7-Q0m" id="bsD-8U-rh9"/>
+                        <outletCollection property="painLevelButtons" destination="uQl-C2-Xuq" collectionClass="NSMutableArray" id="ki1-fK-3Bb"/>
+                        <outletCollection property="painLevelButtons" destination="Nzc-aJ-rYk" collectionClass="NSMutableArray" id="ndq-73-b50"/>
+                        <outletCollection property="painLevelButtons" destination="HI8-ic-Pmo" collectionClass="NSMutableArray" id="LTh-Cx-Z94"/>
+                        <outletCollection property="painLevelButtons" destination="Bj8-Ew-kID" collectionClass="NSMutableArray" id="Qys-TJ-QFp"/>
+                        <outletCollection property="painLevelButtons" destination="pjN-TW-0oZ" collectionClass="NSMutableArray" id="lot-Mc-MWA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FuC-mP-cVo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502.8985507246377" y="101.78571428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="0" width="344" height="418"/>
+        <image name="1" width="342" height="400"/>
+        <image name="2" width="344" height="418"/>
+        <image name="3" width="304" height="374"/>
+        <image name="4" width="346" height="416"/>
+    </resources>
 </document>

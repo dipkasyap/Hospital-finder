@@ -18,13 +18,15 @@ final class APIService {
     func load<T>(resource: Resource<T>, completion: @escaping (T?, Error?) -> ()) {
         
         URLSession.shared.dataTask(with: resource.url) { data, response, error in
-        
+            
             if let data = data {
                 DispatchQueue.main.async {
                     completion(resource.parse(data), error)
                 }
             } else {
-                completion(nil, error)
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
             }
             
         }.resume()

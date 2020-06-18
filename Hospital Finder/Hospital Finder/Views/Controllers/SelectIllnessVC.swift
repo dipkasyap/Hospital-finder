@@ -28,6 +28,7 @@ class SelectIllnessVC: UIViewController {
 //MARK:- UI Setup
 extension SelectIllnessVC {
     private func setupUI() {
+        title = "Illness"
         illnessTableView.register(IllnessCell.self)
         illnessTableView.separatorStyle = .none
         refreshControl.addTarget(self, action: #selector(getIllness), for: .valueChanged)
@@ -55,9 +56,9 @@ extension SelectIllnessVC {
 
 //MARK:- Actions
 extension SelectIllnessVC {
-    fileprivate func showHospitals(forIllness illness: IllnessViewModel  ) {
-        let hospitalListVC: HospitalListVC = UIStoryboard(storyboard: .hospital).instantiateViewController()
-        navigationController?.pushViewController(hospitalListVC, animated: true)
+    fileprivate func checkPainLevel(forIllness illness: IllnessViewModel  ) {
+        let selectPainLevelVC = SelectPainLevelVC.load(with: illness)
+        navigationController?.pushViewController(selectPainLevelVC, animated: true)
     }
 }
 
@@ -82,7 +83,7 @@ extension SelectIllnessVC: UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.zoomIn()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [unowned self] in
-            self.showHospitals(forIllness: self.illnessListViewModel.illness(forIndex: indexPath.row))
+            self.checkPainLevel(forIllness: self.illnessListViewModel.illness(forIndex: indexPath.row))
         }
     }
 }

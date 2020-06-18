@@ -23,12 +23,7 @@ struct IllnessListModel : Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
        
         let embeddedContainer =  try container.nestedContainer(keyedBy: CodingKeys.self, forKey: ._embedded)
-             
-        //illnesses = try embeddedContainer.decodeIfPresent([Illnesses].self, forKey: .illnesses)
-        
         illnesses = try embeddedContainer.decodeIfPresent([Illnesses].self, forKey: .illnesses)
-
-        
         page = try container.decodeIfPresent(Page.self, forKey: .page)
     }
     
