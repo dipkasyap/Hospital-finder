@@ -42,6 +42,7 @@ extension HospitalListVC {
         title = "Hospitals"
         hospitalsTableView.register(HospitalCell.self)
         hospitalsTableView.separatorStyle = .none
+        hospitalsTableView.estimatedRowHeight = UITableView.automaticDimension
         refreshControl.addTarget(self, action: #selector(getHospitals), for: .valueChanged)
         hospitalsTableView.addSubview(refreshControl)
         hospitalsTableView.dataSource = self
@@ -105,5 +106,13 @@ extension HospitalListVC: UITableViewDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [unowned self] in
             self.showOnMap(self.hospitalViewModel.hospitals(forIndex: indexPath.row))
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
