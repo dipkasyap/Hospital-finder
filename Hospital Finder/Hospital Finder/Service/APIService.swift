@@ -2,11 +2,9 @@
 //  APIService.swift
 //  Hospital Finder
 //
-//  Created by Admin on 18/6/20.
-//  Copyright © 2020 Admin. All rights reserved.
+//  Created by Devi Pd Ghimire on 18/6/20.
+//  Copyright © 2020 Devi Pd Ghimire. All rights reserved.
 //
-
-import Foundation
 
 import Foundation
 
@@ -17,16 +15,16 @@ struct Resource<T> {
 
 final class APIService {
     
-    func load<T>(resource: Resource<T>, completion: @escaping (T?) -> ()) {
+    func load<T>(resource: Resource<T>, completion: @escaping (T?, Error?) -> ()) {
         
         URLSession.shared.dataTask(with: resource.url) { data, response, error in
         
             if let data = data {
                 DispatchQueue.main.async {
-                     completion(resource.parse(data))
+                    completion(resource.parse(data), error)
                 }
             } else {
-                completion(nil)
+                completion(nil, error)
             }
             
         }.resume()

@@ -9,90 +9,52 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="lZT-7I-ByU" customClass="IllnessCell">
-            <rect key="frame" x="0.0" y="0.0" width="377" height="80"/>
+        <view contentMode="scaleToFill" id="lZT-7I-ByU" customClass="IllnessCell" customModule="Hospital_Finder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="75"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9e7-cb-Nlc" customClass="CircularView" customModule="Hospital_Finder" customModuleProvider="target">
-                    <rect key="frame" x="-75.5" y="0.0" width="528" height="80"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bq7-nh-UZl" userLabel="Container View" customClass="BoxShadowView" customModule="Hospital_Finder" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="8" width="398" height="67"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bq7-nh-UZl" userLabel="Container View">
-                            <rect key="frame" x="75.5" y="0.0" width="377" height="80"/>
-                            <subviews>
-                                <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqp-fa-Ww7" userLabel="Content View">
-                                    <rect key="frame" x="0.0" y="0.0" width="377" height="76"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a0k-aa-o6P">
-                                            <rect key="frame" x="16" y="16" width="43" height="44"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illness" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRz-ax-OdP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.54886978860000002" green="0.55291134119999996" blue="0.55686062569999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="sRz-ax-OdP" firstAttribute="top" secondItem="a0k-aa-o6P" secondAttribute="top" id="NY1-GO-pBG"/>
-                                            </constraints>
-                                        </stackView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfW-7T-Zbl">
-                                            <rect key="frame" x="353" y="29" width="8" height="18"/>
-                                            <state key="normal" image="arrow-white-right"/>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstItem="a0k-aa-o6P" firstAttribute="top" secondItem="iqp-fa-Ww7" secondAttribute="top" constant="16" id="2be-4l-Nad"/>
-                                        <constraint firstAttribute="bottom" secondItem="a0k-aa-o6P" secondAttribute="bottom" constant="16" id="80m-y6-WVg"/>
-                                        <constraint firstItem="FfW-7T-Zbl" firstAttribute="centerY" secondItem="iqp-fa-Ww7" secondAttribute="centerY" id="Asc-Ys-S8r"/>
-                                        <constraint firstItem="a0k-aa-o6P" firstAttribute="leading" secondItem="iqp-fa-Ww7" secondAttribute="leading" constant="16" id="QP7-Qa-E1t"/>
-                                        <constraint firstAttribute="trailing" secondItem="FfW-7T-Zbl" secondAttribute="trailing" constant="16" id="Zvr-5K-6xq"/>
-                                        <constraint firstItem="a0k-aa-o6P" firstAttribute="centerY" secondItem="iqp-fa-Ww7" secondAttribute="centerY" id="hIe-8k-UH7"/>
-                                    </constraints>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                            <color key="value" red="0.0" green="0.78411883120000003" blue="0.78431981799999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                            </subviews>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="iqp-fa-Ww7" firstAttribute="top" secondItem="bq7-nh-UZl" secondAttribute="top" id="0zn-UD-3MU"/>
-                                <constraint firstItem="iqp-fa-Ww7" firstAttribute="width" secondItem="bq7-nh-UZl" secondAttribute="width" id="9y3-5b-kMF"/>
-                                <constraint firstItem="iqp-fa-Ww7" firstAttribute="centerX" secondItem="bq7-nh-UZl" secondAttribute="centerX" id="FHk-YV-SWY"/>
-                                <constraint firstAttribute="bottom" secondItem="iqp-fa-Ww7" secondAttribute="bottom" constant="4" id="ano-BT-R7Q"/>
-                            </constraints>
-                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illness" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRz-ax-OdP">
+                            <rect key="frame" x="12" y="16" width="43" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.54886978860000002" green="0.55291134119999996" blue="0.55686062569999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfW-7T-Zbl">
+                            <rect key="frame" x="373" y="22.5" width="13" height="22"/>
+                            <state key="normal" image="next-arrow"/>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="0.99999994039535522" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="bq7-nh-UZl" firstAttribute="centerX" secondItem="9e7-cb-Nlc" secondAttribute="centerX" id="WUi-zB-37D"/>
-                        <constraint firstItem="bq7-nh-UZl" firstAttribute="centerY" secondItem="9e7-cb-Nlc" secondAttribute="centerY" id="b4q-jG-fG8"/>
+                        <constraint firstItem="sRz-ax-OdP" firstAttribute="top" secondItem="bq7-nh-UZl" secondAttribute="top" constant="16" id="Cy0-mj-l53"/>
+                        <constraint firstItem="sRz-ax-OdP" firstAttribute="leading" secondItem="bq7-nh-UZl" secondAttribute="leading" constant="12" id="JMz-uy-2pU"/>
+                        <constraint firstAttribute="trailing" secondItem="FfW-7T-Zbl" secondAttribute="trailing" constant="12" id="RLr-as-Wki"/>
+                        <constraint firstAttribute="bottom" secondItem="sRz-ax-OdP" secondAttribute="bottom" constant="16" id="f4c-If-pvB"/>
+                        <constraint firstItem="FfW-7T-Zbl" firstAttribute="centerY" secondItem="bq7-nh-UZl" secondAttribute="centerY" id="z35-IM-tJP"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="bq7-nh-UZl" firstAttribute="height" secondItem="4uG-2K-NkO" secondAttribute="height" id="1Xj-P3-mab"/>
-                <constraint firstItem="9e7-cb-Nlc" firstAttribute="top" secondItem="lZT-7I-ByU" secondAttribute="top" id="9rU-jR-yz2"/>
-                <constraint firstItem="9e7-cb-Nlc" firstAttribute="centerX" secondItem="lZT-7I-ByU" secondAttribute="centerX" id="GL6-vz-uuS"/>
-                <constraint firstAttribute="bottom" secondItem="9e7-cb-Nlc" secondAttribute="bottom" id="M2s-wM-i2u"/>
-                <constraint firstItem="9e7-cb-Nlc" firstAttribute="width" secondItem="4uG-2K-NkO" secondAttribute="width" multiplier="1.4" id="l10-ZF-SFy"/>
-                <constraint firstItem="bq7-nh-UZl" firstAttribute="width" secondItem="4uG-2K-NkO" secondAttribute="width" id="szj-Vs-MFU"/>
+                <constraint firstItem="bq7-nh-UZl" firstAttribute="bottom" secondItem="4uG-2K-NkO" secondAttribute="bottom" id="7Qk-Ss-xVe"/>
+                <constraint firstItem="bq7-nh-UZl" firstAttribute="trailing" secondItem="4uG-2K-NkO" secondAttribute="trailing" id="HEA-FS-8Pp"/>
+                <constraint firstItem="bq7-nh-UZl" firstAttribute="top" secondItem="4uG-2K-NkO" secondAttribute="top" constant="8" id="gwZ-XP-wit"/>
+                <constraint firstItem="bq7-nh-UZl" firstAttribute="leading" secondItem="4uG-2K-NkO" secondAttribute="leading" id="h5i-8e-l6C"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="4uG-2K-NkO"/>
             <connections>
-                <outlet property="containerView" destination="bq7-nh-UZl" id="xJa-23-Yq9"/>
-                <outlet property="titleLabel" destination="sRz-ax-OdP" id="MfS-aX-ZzE"/>
+                <outlet property="discloseButton" destination="FfW-7T-Zbl" id="p8V-Ry-hAa"/>
+                <outlet property="illnessTitleLabel" destination="sRz-ax-OdP" id="6X9-xF-Abs"/>
             </connections>
-            <point key="canvasLocation" x="-436" y="105"/>
+            <point key="canvasLocation" x="-419.19999999999999" y="102.09895052473765"/>
         </view>
     </objects>
     <resources>
-        <image name="arrow-white-right" width="8" height="13"/>
+        <image name="next-arrow" width="13" height="22"/>
     </resources>
 </document>

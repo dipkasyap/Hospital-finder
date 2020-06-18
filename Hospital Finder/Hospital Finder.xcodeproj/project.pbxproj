@@ -17,11 +17,15 @@
 		8497BE4E249AC385006C6FAA /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE4D249AC385006C6FAA /* StoryboardHelper.swift */; };
 		8497BE53249AC637006C6FAA /* IllnessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8497BE51249AC637006C6FAA /* IllnessCell.xib */; };
 		8497BE54249AC637006C6FAA /* IllnessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE52249AC637006C6FAA /* IllnessCell.swift */; };
-		8497BE56249AC6C7006C6FAA /* TableviewCell+Extenssion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE55249AC6C7006C6FAA /* TableviewCell+Extenssion.swift */; };
+		8497BE56249AC6C7006C6FAA /* TableviewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE55249AC6C7006C6FAA /* TableviewCell+Extension.swift */; };
 		8497BE58249ACBA2006C6FAA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE57249ACBA2006C6FAA /* APIService.swift */; };
 		8497BE5A249ACC00006C6FAA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE59249ACC00006C6FAA /* AppConstants.swift */; };
 		8497BE5C249AD00F006C6FAA /* IllnessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE5B249AD00F006C6FAA /* IllnessModel.swift */; };
 		8497BE5E249AE59D006C6FAA /* IllnessListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE5D249AE59D006C6FAA /* IllnessListViewModel.swift */; };
+		8497BE60249AFDC7006C6FAA /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE5F249AFDC7006C6FAA /* TableView+Extension.swift */; };
+		8497BE67249B05FE006C6FAA /* IllnessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE66249B05FE006C6FAA /* IllnessViewModel.swift */; };
+		8497BE69249B24FD006C6FAA /* BoxShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE68249B24FD006C6FAA /* BoxShadowView.swift */; };
+		8497BE6B249B27DE006C6FAA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE6A249B27DE006C6FAA /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,11 +41,15 @@
 		8497BE4D249AC385006C6FAA /* StoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		8497BE51249AC637006C6FAA /* IllnessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IllnessCell.xib; sourceTree = "<group>"; };
 		8497BE52249AC637006C6FAA /* IllnessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllnessCell.swift; sourceTree = "<group>"; };
-		8497BE55249AC6C7006C6FAA /* TableviewCell+Extenssion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableviewCell+Extenssion.swift"; sourceTree = "<group>"; };
+		8497BE55249AC6C7006C6FAA /* TableviewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableviewCell+Extension.swift"; sourceTree = "<group>"; };
 		8497BE57249ACBA2006C6FAA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		8497BE59249ACC00006C6FAA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		8497BE5B249AD00F006C6FAA /* IllnessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessModel.swift; sourceTree = "<group>"; };
 		8497BE5D249AE59D006C6FAA /* IllnessListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessListViewModel.swift; sourceTree = "<group>"; };
+		8497BE5F249AFDC7006C6FAA /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
+		8497BE66249B05FE006C6FAA /* IllnessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessViewModel.swift; sourceTree = "<group>"; };
+		8497BE68249B24FD006C6FAA /* BoxShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxShadowView.swift; sourceTree = "<group>"; };
+		8497BE6A249B27DE006C6FAA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				8497BE5D249AE59D006C6FAA /* IllnessListViewModel.swift */,
+				8497BE66249B05FE006C6FAA /* IllnessViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -151,8 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				8497BE4D249AC385006C6FAA /* StoryboardHelper.swift */,
-				8497BE55249AC6C7006C6FAA /* TableviewCell+Extenssion.swift */,
+				8497BE55249AC6C7006C6FAA /* TableviewCell+Extension.swift */,
+				8497BE5F249AFDC7006C6FAA /* TableView+Extension.swift */,
 				8497BE59249ACC00006C6FAA /* AppConstants.swift */,
+				8497BE68249B24FD006C6FAA /* BoxShadowView.swift */,
+				8497BE6A249B27DE006C6FAA /* UIView+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -202,7 +214,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
-				ORGANIZATIONNAME = Admin;
+				ORGANIZATIONNAME = "Devi Pd Ghimire";
 				TargetAttributes = {
 					8497BE2B249ABFF9006C6FAA = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -249,14 +261,18 @@
 				8497BE5E249AE59D006C6FAA /* IllnessListViewModel.swift in Sources */,
 				8497BE4A249AC132006C6FAA /* HospitalListVC.swift in Sources */,
 				8497BE5A249ACC00006C6FAA /* AppConstants.swift in Sources */,
+				8497BE60249AFDC7006C6FAA /* TableView+Extension.swift in Sources */,
 				8497BE34249ABFF9006C6FAA /* SelectIllnessVC.swift in Sources */,
 				8497BE54249AC637006C6FAA /* IllnessCell.swift in Sources */,
+				8497BE69249B24FD006C6FAA /* BoxShadowView.swift in Sources */,
+				8497BE6B249B27DE006C6FAA /* UIView+Extension.swift in Sources */,
 				8497BE30249ABFF9006C6FAA /* AppDelegate.swift in Sources */,
 				8497BE4E249AC385006C6FAA /* StoryboardHelper.swift in Sources */,
 				8497BE5C249AD00F006C6FAA /* IllnessModel.swift in Sources */,
 				8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */,
 				8497BE58249ACBA2006C6FAA /* APIService.swift in Sources */,
-				8497BE56249AC6C7006C6FAA /* TableviewCell+Extenssion.swift in Sources */,
+				8497BE56249AC6C7006C6FAA /* TableviewCell+Extension.swift in Sources */,
+				8497BE67249B05FE006C6FAA /* IllnessViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
