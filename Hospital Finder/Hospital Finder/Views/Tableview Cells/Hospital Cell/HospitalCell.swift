@@ -20,6 +20,7 @@ class HospitalCell: UITableViewCell, NibLoadableView {
     func setupWith(_ hospital: HospitalViewModel) {
         hospitalNameLabel.text = hospital.name
         waitingTimeValueLabel.text = hospital.waitingTime.toReadableTime
+        setNeedsDisplay()
     }
 
     override func awakeFromNib() {

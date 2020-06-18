@@ -23,13 +23,13 @@ class IllnessCell: UITableViewCell, NibLoadableView {
     
     func setupWith(_ illness: IllnessViewModel) {
         illnessTitleLabel.text = illness.name
-        backgroundColor = .clear
         setNeedsDisplay()
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        backgroundColor = .clear
     }
     
 }
