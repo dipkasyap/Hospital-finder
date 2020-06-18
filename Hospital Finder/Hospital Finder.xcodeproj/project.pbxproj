@@ -26,6 +26,9 @@
 		8497BE67249B05FE006C6FAA /* IllnessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE66249B05FE006C6FAA /* IllnessViewModel.swift */; };
 		8497BE69249B24FD006C6FAA /* BoxShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE68249B24FD006C6FAA /* BoxShadowView.swift */; };
 		8497BE6B249B27DE006C6FAA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE6A249B27DE006C6FAA /* UIView+Extension.swift */; };
+		8497BE6D249B338D006C6FAA /* SelectPainLevelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE6C249B338D006C6FAA /* SelectPainLevelVC.swift */; };
+		8497BE6F249B36B8006C6FAA /* PainLevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE6E249B36B8006C6FAA /* PainLevelButton.swift */; };
+		8497BE72249B3AA5006C6FAA /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE71249B3AA5006C6FAA /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		8497BE66249B05FE006C6FAA /* IllnessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessViewModel.swift; sourceTree = "<group>"; };
 		8497BE68249B24FD006C6FAA /* BoxShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxShadowView.swift; sourceTree = "<group>"; };
 		8497BE6A249B27DE006C6FAA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		8497BE6C249B338D006C6FAA /* SelectPainLevelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPainLevelVC.swift; sourceTree = "<group>"; };
+		8497BE6E249B36B8006C6FAA /* PainLevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelButton.swift; sourceTree = "<group>"; };
+		8497BE71249B3AA5006C6FAA /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 				8497BE4F249AC5FD006C6FAA /* Tableview Cells */,
 				8497BE4B249AC310006C6FAA /* Storyboards */,
 				8497BE48249AC0ED006C6FAA /* Controllers */,
+				8497BE70249B36BD006C6FAA /* Buttons */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -127,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				8497BE5B249AD00F006C6FAA /* IllnessModel.swift */,
+				8497BE71249B3AA5006C6FAA /* Common.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 			children = (
 				8497BE33249ABFF9006C6FAA /* SelectIllnessVC.swift */,
 				8497BE49249AC132006C6FAA /* HospitalListVC.swift */,
+				8497BE6C249B338D006C6FAA /* SelectPainLevelVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,6 +193,14 @@
 				8497BE52249AC637006C6FAA /* IllnessCell.swift */,
 			);
 			path = "Illness Cell";
+			sourceTree = "<group>";
+		};
+		8497BE70249B36BD006C6FAA /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8497BE6E249B36B8006C6FAA /* PainLevelButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,13 +279,16 @@
 				8497BE4A249AC132006C6FAA /* HospitalListVC.swift in Sources */,
 				8497BE5A249ACC00006C6FAA /* AppConstants.swift in Sources */,
 				8497BE60249AFDC7006C6FAA /* TableView+Extension.swift in Sources */,
+				8497BE72249B3AA5006C6FAA /* Common.swift in Sources */,
 				8497BE34249ABFF9006C6FAA /* SelectIllnessVC.swift in Sources */,
 				8497BE54249AC637006C6FAA /* IllnessCell.swift in Sources */,
 				8497BE69249B24FD006C6FAA /* BoxShadowView.swift in Sources */,
+				8497BE6F249B36B8006C6FAA /* PainLevelButton.swift in Sources */,
 				8497BE6B249B27DE006C6FAA /* UIView+Extension.swift in Sources */,
 				8497BE30249ABFF9006C6FAA /* AppDelegate.swift in Sources */,
 				8497BE4E249AC385006C6FAA /* StoryboardHelper.swift in Sources */,
 				8497BE5C249AD00F006C6FAA /* IllnessModel.swift in Sources */,
+				8497BE6D249B338D006C6FAA /* SelectPainLevelVC.swift in Sources */,
 				8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */,
 				8497BE58249ACBA2006C6FAA /* APIService.swift in Sources */,
 				8497BE56249AC6C7006C6FAA /* TableviewCell+Extension.swift in Sources */,
@@ -426,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dip.Hospital-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,7 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dip.Hospital-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
