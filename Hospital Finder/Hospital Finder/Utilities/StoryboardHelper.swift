@@ -37,7 +37,9 @@ extension UIViewController: StoryboardIdentifiable { }
   class func storyboard(storyboard: Storyboard, bundle: Bundle? = nil) -> UIStoryboard {
     return UIStoryboard(name: storyboard.rawValue, bundle: bundle)
   }
-  
+    
+    /// Returns the UIViewController from storyboard with identifier same as class name 
+    /// - Returns: UIViewController
   func instantiateViewController<T: UIViewController>() -> T {
     guard let viewController = instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
       fatalError("\n\nCould not find view controller with name \(T.storyboardIdentifier)\n\n")
