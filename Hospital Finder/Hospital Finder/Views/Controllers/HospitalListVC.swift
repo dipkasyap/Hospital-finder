@@ -70,9 +70,14 @@ extension HospitalListVC {
 //MARK:- Actions
 extension HospitalListVC {
     fileprivate func showOnMap(_ hospital: HospitalViewModel  ) {
-//        let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude:address.latitude, longitude:address.longitude)))
-//        destination.name = address.addressLine1
-//        MKMapItem.openMaps(with: [destination], launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+        
+        guard let lat = hospital.location?.lat, let long = hospital.location?.long else {
+            print("Location not found")
+            return
+        }
+        let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long)))
+        destination.name = hospital.name
+        MKMapItem.openMaps(with: [destination], launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
     }
 }
 
