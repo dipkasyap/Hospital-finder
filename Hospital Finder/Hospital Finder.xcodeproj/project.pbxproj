@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8418A6E2249C25AC00F46404 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6E1249C25AC00F46404 /* Int+Extension.swift */; };
 		8497BE30249ABFF9006C6FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE2F249ABFF9006C6FAA /* AppDelegate.swift */; };
 		8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE31249ABFF9006C6FAA /* SceneDelegate.swift */; };
 		8497BE34249ABFF9006C6FAA /* SelectIllnessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE33249ABFF9006C6FAA /* SelectIllnessVC.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8418A6E1249C25AC00F46404 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		8497BE2C249ABFF9006C6FAA /* Hospital Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hospital Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8497BE2F249ABFF9006C6FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8497BE31249ABFF9006C6FAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				8497BE59249ACC00006C6FAA /* AppConstants.swift */,
 				8497BE68249B24FD006C6FAA /* BoxShadowView.swift */,
 				8497BE6A249B27DE006C6FAA /* UIView+Extension.swift */,
+				8418A6E1249C25AC00F46404 /* Int+Extension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				8497BE72249B3AA5006C6FAA /* Common.swift in Sources */,
 				8497BE34249ABFF9006C6FAA /* SelectIllnessVC.swift in Sources */,
 				8497BE54249AC637006C6FAA /* IllnessCell.swift in Sources */,
+				8418A6E2249C25AC00F46404 /* Int+Extension.swift in Sources */,
 				8497BE69249B24FD006C6FAA /* BoxShadowView.swift in Sources */,
 				8497BE6F249B36B8006C6FAA /* PainLevelButton.swift in Sources */,
 				8497BE6B249B27DE006C6FAA /* UIView+Extension.swift in Sources */,

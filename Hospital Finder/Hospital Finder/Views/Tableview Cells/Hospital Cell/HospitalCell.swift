@@ -19,13 +19,13 @@ class HospitalCell: UITableViewCell, NibLoadableView {
     
     func setupWith(_ hospital: HospitalViewModel) {
         hospitalNameLabel.text = hospital.name
-        backgroundColor = .clear
-        setNeedsDisplay()
+        waitingTimeValueLabel.text = hospital.waitingTime.toReadableTime
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        backgroundColor = .clear
     }
     
 }

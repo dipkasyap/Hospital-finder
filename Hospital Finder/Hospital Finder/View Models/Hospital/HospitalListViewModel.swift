@@ -13,16 +13,12 @@ class HospitalListViewModel {
     
     private var hospitalData: HospitalListModel?
     private(set) var hospitals = [HospitalViewModel]()
-
-    //get patient Pain level and filter Hospitals
     
     var numbersOfHospitals: Int  {
-        //apply filter
         return self.hospitals.count
     }
     
     func hospitals(forIndex index: Int)-> HospitalViewModel  {
-            //apply filter
           return self.hospitals[index]
       }
     
@@ -64,5 +60,25 @@ class HospitalListViewModel {
             
         }
     }
+    
+    
+    /// Sorts the hospitals with calculating waiting time for pain level provided
+    /// - Parameter painLevel: PainLevel
+    func applyPainLevel(_ painLevel: PainLevel) {
+        
+        //1 get waiting list for pain level
+        //2 calculate time patientCount * averageProcessTime
+        //3 set waiting time
+        //4 sort based on waiting time
+        // return self
+                
+        hospitals.forEach { (aHospital) in
+            aHospital.calculate(waitingTimeForPainLevel: painLevel)
+        }
+        
+        hospitals.sort{$0.waitingTime < $1.waitingTime}
+        
+    }
+    
 }
 

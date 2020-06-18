@@ -57,7 +57,9 @@ extension HospitalListVC {
     @objc private func getHospitals() {
         hospitalViewModel.getHospitals{ [weak self] success, error in
             if success {
-                //reload table
+                if let painLevel = self?.painLevelViewModel.painLevel {
+                    self?.hospitalViewModel.applyPainLevel(painLevel)
+                }
                 self?.hospitalsTableView.reloadData()
             } else {
                 //show error alert
