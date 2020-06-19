@@ -8,7 +8,7 @@
 import Foundation
 
 protocol IllnessListHandling {
-    func getIllnesses(_ then: @escaping (_: IllnessListModel?, _: Error?) -> Void)
+    func getIllnesses(_ completion: @escaping (_: IllnessListModel?, _: Error?) -> Void)
 }
 
 final class IllnessListHandler: IllnessListHandling {
@@ -24,7 +24,7 @@ final class IllnessListHandler: IllnessListHandling {
      - returns: (success, error?)
      - Parameter then: (data: IllnessListModel?, error: Error?)->())
      */
-    func getIllnesses(_ then: @escaping (_: IllnessListModel?, _: Error?) -> Void) {
+    func getIllnesses(_ completion: @escaping (_: IllnessListModel?, _: Error?) -> Void) {
         guard let url = URL(string: AppConstants.URL.illness) else { return }
         
         let illnessListResource = Resource<IllnessListModel>(url: url) { data in
@@ -36,10 +36,10 @@ final class IllnessListHandler: IllnessListHandling {
         webService.load(resource: illnessListResource) {result, error in
             
             if let illnessData = result {
-                then(illnessData, nil)
+                completion(illnessData, nil)
             } else {
                 // error
-                then(nil, error)
+                completion(nil, error)
             }
         }
     }
