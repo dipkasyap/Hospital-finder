@@ -13,7 +13,7 @@ protocol HospitalListHandling {
 
 final class HospitalListHandler: HospitalListHandling {
    
-    private let webService: WebService!
+    private let webService: WebService
     
     init(withWebService webService: WebService = WebService()) {
         self.webService = webService
