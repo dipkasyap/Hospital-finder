@@ -14,13 +14,17 @@ class IllnessListViewModel {
     private var illnessData: IllnessListModel?
     private(set) var illnesses = [IllnessViewModel]()
 
-    var numbersOfIllness: Int  {
-        return self.illnesses.count
+    var numbersOfIllness: Int  { self.illnesses.count }
+
+    private let illnessListHandler: IllnessListHandling
+
+    init(withIllnessListHandling illnessListHandler: IllnessListHandling = IllnessListHandler()) {
+        self.illnessListHandler = illnessListHandler
     }
-    
+
     func illness(forIndex index: Int)-> IllnessViewModel  {
-          return self.illnesses[index]
-      }
+        return self.illnesses[index]
+    }
     
     /**
      Calls Illness getter API
@@ -28,7 +32,7 @@ class IllnessListViewModel {
      - Parameter then: (success: Bool, error: Error)->())
      */
     func getIlleness(_ then: @escaping (_:Bool, _:Error?)->()) {
-        IllnessListHandler(withWebService: WebService()).getIllnesses{ [weak self] (illnessListModel, error) in
+        illnessListHandler.getIllnesses{ [weak self] (illnessListModel, error) in
 
             if let illnessListModel = illnessListModel {
                 
