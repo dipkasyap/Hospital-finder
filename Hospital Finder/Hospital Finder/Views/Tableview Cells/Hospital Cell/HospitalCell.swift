@@ -22,11 +22,19 @@ class HospitalCell: UITableViewCell, NibLoadableView {
         waitingTimeValueLabel.text = hospital.waitingTime.toReadableTime
         setNeedsDisplay()
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
+    }
+    
+    private func setupUI() {
         selectionStyle = .none
         backgroundColor = .clear
+        hospitalNameLabel.textColor = AppConstants.Color.subtitleGray
+        waitingTimeLabel.textColor = AppConstants.Color.subtitleGrayLight
+        waitingTimeValueLabel.textColor = AppConstants.Color.appRed
+
     }
     
 }

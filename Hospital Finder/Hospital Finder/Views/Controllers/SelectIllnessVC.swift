@@ -11,8 +11,9 @@ import UIKit
 
 class SelectIllnessVC: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var illnessTableView: UITableView!
-    let refreshControl = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
     
     private var illnessListViewModel: IllnessListViewModel = IllnessListViewModel()
     
@@ -29,6 +30,7 @@ class SelectIllnessVC: UIViewController {
 extension SelectIllnessVC {
     private func setupUI() {
         title = "Illness"
+        titleLabel.textColor = AppConstants.Color.subtitleGray
         illnessTableView.register(IllnessCell.self)
         illnessTableView.separatorStyle = .none
         illnessTableView.estimatedRowHeight = UITableView.automaticDimension

@@ -12,8 +12,9 @@ import MapKit
 
 class HospitalListVC: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var hospitalsTableView: UITableView!
-    let refreshControl = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
 
     private var illnessViewModel: IllnessViewModel!
     private var painLevelViewModel: PainLevelViewModel = PainLevelViewModel()
@@ -40,6 +41,7 @@ class HospitalListVC: UIViewController {
 extension HospitalListVC {
     private func setupUI() {
         title = "Hospitals"
+        titleLabel.textColor = AppConstants.Color.subtitleGray
         hospitalsTableView.register(HospitalCell.self)
         hospitalsTableView.separatorStyle = .none
         hospitalsTableView.estimatedRowHeight = UITableView.automaticDimension

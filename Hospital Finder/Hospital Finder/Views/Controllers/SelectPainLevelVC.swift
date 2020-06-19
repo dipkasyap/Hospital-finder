@@ -11,6 +11,7 @@ import UIKit
 class SelectPainLevelVC: UIViewController {
     
     @IBOutlet var painLevelButtons: [PainLevelButton]!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var illnessLabel: UILabel!
     
     private var illnessViewModel: IllnessViewModel!
@@ -35,6 +36,7 @@ class SelectPainLevelVC: UIViewController {
 extension SelectPainLevelVC {
     private func setupUI() {
         title = "Pain Level"
+        titleLabel.textColor = AppConstants.Color.subtitleGray
         illnessLabel.text = illnessViewModel.name
     }
 }

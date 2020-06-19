@@ -14,22 +14,23 @@ import UIKit
 class IllnessCell: UITableViewCell, NibLoadableView {
     
     @IBOutlet private  var illnessTitleLabel: UILabel!
-    @IBOutlet weak var discloseButton: UIButton! {
-        didSet {
-            discloseButton.tintColor = AppConstants.Color.discloseButton
-        }
-        
-    }
+    @IBOutlet weak var discloseButton: UIButton!
     
     func setupWith(_ illness: IllnessViewModel) {
         illnessTitleLabel.text = illness.name
         setNeedsDisplay()
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
+    }
+    
+    private func setupUI() {
         selectionStyle = .none
         backgroundColor = .clear
+        illnessTitleLabel.textColor = AppConstants.Color.subtitleGray
+        discloseButton.tintColor = AppConstants.Color.appRed
     }
     
 }
