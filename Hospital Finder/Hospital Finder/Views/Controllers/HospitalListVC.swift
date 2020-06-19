@@ -15,7 +15,7 @@ class HospitalListVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var hospitalsTableView: UITableView!
     private let refreshControl = UIRefreshControl()
-
+    
     private var illnessViewModel: IllnessViewModel!
     private var painLevelViewModel: PainLevelViewModel = PainLevelViewModel()
     private var hospitalViewModel: HospitalListViewModel = HospitalListViewModel()
@@ -29,11 +29,11 @@ class HospitalListVC: UIViewController {
     }
     
     //MARK:- View cycle
-       override func viewDidLoad() {
-           super.viewDidLoad()
-           setupUI()
-           getHospitals()
-       }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        getHospitals()
+    }
     
 }
 
@@ -74,6 +74,23 @@ extension HospitalListVC {
 
 //MARK:- Actions
 extension HospitalListVC {
+    
+    fileprivate func savePatientInfoOnDB(forHospital hospital: HospitalViewModel) {
+        DBService.savePatient(
+            withIllness: illnessViewModel,
+            andPainLevel: painLevelViewModel.painLevel!,
+            forHospital: hospital) { result in
+                
+                switch result{
+                case .success:
+                    showOnMap(hospital)
+                    break
+                case .failure:
+                    break
+                }
+        }
+    }
+    
     fileprivate func showOnMap(_ hospital: HospitalViewModel  ) {
         
         guard let lat = hospital.location?.lat, let long = hospital.location?.long else {
@@ -108,7 +125,7 @@ extension HospitalListVC: UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.zoomIn()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [unowned self] in
-            self.showOnMap(self.hospitalViewModel.hospitals(forIndex: indexPath.row))
+            self.savePatientInfoOnDB(forHospital: self.hospitalViewModel.hospitals(forIndex: indexPath.row))
         }
     }
     

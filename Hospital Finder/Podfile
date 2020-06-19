@@ -9,6 +9,6 @@ target 'Hospital Finder' do
 
   pod 'SVProgressHUD'
   pod 'NotificationBannerSwift', '~> 3.0.0'
-
+  pod 'RealmSwift'
 
 end

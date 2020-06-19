@@ -49,12 +49,10 @@ extension SelectIllnessVC {
         illnessListViewModel.getIlleness{ [weak self] success, error in
             if success {
                 self?.illnessTableView.reloadData()
-            } else {
-                //show error alert
-            }
+            } 
             self?.refreshControl.endRefreshing()
+            ProgressHud.hide()
         }
-        ProgressHud.hide()
     }
 }
 

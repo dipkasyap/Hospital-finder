@@ -10,6 +10,8 @@
 		8418A6E2249C25AC00F46404 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6E1249C25AC00F46404 /* Int+Extension.swift */; };
 		8418A6E4249C31AB00F46404 /* ProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6E3249C31AB00F46404 /* ProgressHud.swift */; };
 		8418A6E6249C3AF200F46404 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6E5249C3AF200F46404 /* Alert.swift */; };
+		8418A6EC249C4A0000F46404 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6EB249C4A0000F46404 /* DBService.swift */; };
+		8418A6EE249C4A6C00F46404 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6ED249C4A6C00F46404 /* PatientModel.swift */; };
 		8497BE30249ABFF9006C6FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE2F249ABFF9006C6FAA /* AppDelegate.swift */; };
 		8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE31249ABFF9006C6FAA /* SceneDelegate.swift */; };
 		8497BE34249ABFF9006C6FAA /* SelectIllnessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE33249ABFF9006C6FAA /* SelectIllnessVC.swift */; };
@@ -47,6 +49,8 @@
 		8418A6E1249C25AC00F46404 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		8418A6E3249C31AB00F46404 /* ProgressHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHud.swift; sourceTree = "<group>"; };
 		8418A6E5249C3AF200F46404 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		8418A6EB249C4A0000F46404 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		8418A6ED249C4A6C00F46404 /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
 		8497BE2C249ABFF9006C6FAA /* Hospital Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hospital Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8497BE2F249ABFF9006C6FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8497BE31249ABFF9006C6FAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,14 @@
 				2F760F8B915006DB54D161EE /* Pods-Hospital Finder.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8418A6EF249C4A7100F46404 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				8418A6ED249C4A6C00F46404 /* PatientModel.swift */,
+			);
+			path = Patient;
 			sourceTree = "<group>";
 		};
 		8497BE23249ABFF9006C6FAA = {
@@ -171,6 +183,7 @@
 				8497BE7A249B4C91006C6FAA /* Illness */,
 				8497BE79249B4C89006C6FAA /* Hospital */,
 				8497BE71249B3AA5006C6FAA /* Common.swift */,
+				8418A6EF249C4A7100F46404 /* Patient */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				8497BE57249ACBA2006C6FAA /* APIService.swift */,
+				8418A6EB249C4A0000F46404 /* DBService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -422,6 +436,7 @@
 				8497BE83249B52E8006C6FAA /* HospitalCell.swift in Sources */,
 				8418A6E4249C31AB00F46404 /* ProgressHud.swift in Sources */,
 				8497BE5E249AE59D006C6FAA /* IllnessListViewModel.swift in Sources */,
+				8418A6EE249C4A6C00F46404 /* PatientModel.swift in Sources */,
 				8497BE74249B4342006C6FAA /* PainLevelViewModel.swift in Sources */,
 				8497BE4A249AC132006C6FAA /* HospitalListVC.swift in Sources */,
 				8497BE5A249ACC00006C6FAA /* AppConstants.swift in Sources */,
@@ -445,6 +460,7 @@
 				8497BE67249B05FE006C6FAA /* IllnessViewModel.swift in Sources */,
 				8497BE7C249B4CC9006C6FAA /* HospitalListViewModel.swift in Sources */,
 				8497BE76249B4A3F006C6FAA /* HospitalListModel.swift in Sources */,
+				8418A6EC249C4A0000F46404 /* DBService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

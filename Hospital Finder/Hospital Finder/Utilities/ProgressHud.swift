@@ -20,7 +20,7 @@ class ProgressHud: NSObject {
         SVProgressHUD.setBackgroundColor (UIColor.black.withAlphaComponent(0.4))
         SVProgressHUD.setForegroundColor (AppConstants.Color.hospitalBlue)
         SVProgressHUD.setBackgroundColor (.clear)
-        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+        SVProgressHUD.setDefaultMaskType(.black)
         SVProgressHUD.setRingNoTextRadius(20)
         SVProgressHUD.setRingThickness(3)
         SVProgressHUD.setDefaultAnimationType(SVProgressHUDAnimationType.flat)
