@@ -6,10 +6,7 @@
 //  Copyright © 2020 Devi Pd Ghimire. All rights reserved.
 //
 
-
 import UIKit
-
-
 
 class IllnessCell: UITableViewCell, NibLoadableView {
     

@@ -23,7 +23,6 @@ class IllnessListViewModel {
           return self.illnesses[index]
       }
     
-    
         
     /**
      Calls Illness getter API

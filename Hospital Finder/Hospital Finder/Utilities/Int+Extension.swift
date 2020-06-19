@@ -11,7 +11,6 @@ import Foundation
 extension Int {
     /// Converts given minutes to hours, days.... if applicable
     var toReadableTime: String {
-        
         if self < 60 {
             return "\(self) mins"
         } else if self < (60 * 24) {

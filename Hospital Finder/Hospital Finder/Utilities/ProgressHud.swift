@@ -13,7 +13,6 @@ import SVProgressHUD
 class ProgressHud: NSObject {
     
     class func showIn(_ view: UIView){
-        
         SVProgressHUD.show()
         SVProgressHUD.setContainerView(view)
         SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.custom)
@@ -25,7 +24,6 @@ class ProgressHud: NSObject {
         SVProgressHUD.setRingThickness(3)
         SVProgressHUD.setDefaultAnimationType(SVProgressHUDAnimationType.flat)
     }
-    
     
     class func hide(){
         SVProgressHUD.dismiss()

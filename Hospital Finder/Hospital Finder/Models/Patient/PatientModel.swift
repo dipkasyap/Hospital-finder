@@ -12,6 +12,7 @@ import Realm
 
 
 class Patient_DB_Model: Object {
+    //TODO:- id is static for now, need to provide dynamic id based on user info
     @objc dynamic var id = 0
     @objc dynamic var painLevel = 0
     @objc dynamic var hospital: Hospital_DB_Model?
