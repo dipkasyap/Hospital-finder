@@ -1,5 +1,5 @@
 //
-//  APIService.swift
+//  WebService.swift
 //  Hospital Finder
 //
 //  Created by Devi Pd Ghimire on 18/6/20.
@@ -13,7 +13,7 @@ struct Resource<T> {
     let parse: (Data) -> T?
 }
 
-final class APIService {
+final class WebService {
     
     func load<T>(resource: Resource<T>, completion: @escaping (T?, Error?) -> ()) {
         

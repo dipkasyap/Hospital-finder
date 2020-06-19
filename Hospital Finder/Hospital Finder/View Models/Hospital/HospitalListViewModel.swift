@@ -22,7 +22,6 @@ class HospitalListViewModel {
     func hospitals(forIndex index: Int)-> HospitalViewModel  {
           return self.hospitals[index]
       }
-    
         
     /**
      Calls Illness getter API
@@ -31,28 +30,16 @@ class HospitalListViewModel {
      */
     func getHospitals(_ then: @escaping (_:Bool, _:Error?)->()) {
         
-        guard let url = URL(string: AppConstants.URL.hospitals) else {
-            print("Cannot parse url")
-            return
-        }
-        
-        let hospitalListResource = Resource<HospitalListModel>(url: url) { data in
-            
-            let hospitalData = try? JSONDecoder().decode(HospitalListModel.self, from: data)
-            return hospitalData
-        }
-                
-        APIService().load(resource: hospitalListResource) { [weak self] result, error in
-            
-            if let hospitalData = result {
+        HospitalListHandler(withWebService: WebService()).getHospitals { [weak self] (hospitalListModel, error) in
+            if let hospitalData = hospitalListModel {
                 
                 self?.hospitalData = hospitalData
-              
+                
                 if let hospitalModel = hospitalData.hospitals {
                     self?.hospitals = hospitalModel.map{HospitalViewModel($0)}
                 }
                 then(true, nil)
-                                                
+                
             } else {
                 //error
                 let banner = FloatingNotificationBanner(subtitle: error?.localizedDescription, style: .danger)

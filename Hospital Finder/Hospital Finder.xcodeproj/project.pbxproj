@@ -13,6 +13,8 @@
 		8418A6EE249C4A6C00F46404 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6ED249C4A6C00F46404 /* PatientModel.swift */; };
 		8418A6F7249C76AE00F46404 /* Hospital_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6F6249C76AE00F46404 /* Hospital_FinderTests.swift */; };
 		8418A705249C7B7400F46404 /* Hospital_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A704249C7B7400F46404 /* Hospital_FinderUITests.swift */; };
+		8418A713249CA14000F46404 /* IllnessListHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A711249CA14000F46404 /* IllnessListHandling.swift */; };
+		8418A714249CA14000F46404 /* HospitalListHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A712249CA14000F46404 /* HospitalListHandling.swift */; };
 		8497BE30249ABFF9006C6FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE2F249ABFF9006C6FAA /* AppDelegate.swift */; };
 		8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE31249ABFF9006C6FAA /* SceneDelegate.swift */; };
 		8497BE34249ABFF9006C6FAA /* SelectIllnessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE33249ABFF9006C6FAA /* SelectIllnessVC.swift */; };
@@ -24,7 +26,7 @@
 		8497BE53249AC637006C6FAA /* IllnessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8497BE51249AC637006C6FAA /* IllnessCell.xib */; };
 		8497BE54249AC637006C6FAA /* IllnessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE52249AC637006C6FAA /* IllnessCell.swift */; };
 		8497BE56249AC6C7006C6FAA /* TableviewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE55249AC6C7006C6FAA /* TableviewCell+Extension.swift */; };
-		8497BE58249ACBA2006C6FAA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE57249ACBA2006C6FAA /* APIService.swift */; };
+		8497BE58249ACBA2006C6FAA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE57249ACBA2006C6FAA /* WebService.swift */; };
 		8497BE5A249ACC00006C6FAA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE59249ACC00006C6FAA /* AppConstants.swift */; };
 		8497BE5C249AD00F006C6FAA /* IllnessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE5B249AD00F006C6FAA /* IllnessModel.swift */; };
 		8497BE5E249AE59D006C6FAA /* IllnessListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE5D249AE59D006C6FAA /* IllnessListViewModel.swift */; };
@@ -74,6 +76,8 @@
 		8418A702249C7B7400F46404 /* Hospital FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hospital FinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8418A704249C7B7400F46404 /* Hospital_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital_FinderUITests.swift; sourceTree = "<group>"; };
 		8418A706249C7B7400F46404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8418A711249CA14000F46404 /* IllnessListHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllnessListHandling.swift; sourceTree = "<group>"; };
+		8418A712249CA14000F46404 /* HospitalListHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalListHandling.swift; sourceTree = "<group>"; };
 		8497BE2C249ABFF9006C6FAA /* Hospital Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hospital Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8497BE2F249ABFF9006C6FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8497BE31249ABFF9006C6FAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +91,7 @@
 		8497BE51249AC637006C6FAA /* IllnessCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IllnessCell.xib; sourceTree = "<group>"; };
 		8497BE52249AC637006C6FAA /* IllnessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllnessCell.swift; sourceTree = "<group>"; };
 		8497BE55249AC6C7006C6FAA /* TableviewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableviewCell+Extension.swift"; sourceTree = "<group>"; };
-		8497BE57249ACBA2006C6FAA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		8497BE57249ACBA2006C6FAA /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		8497BE59249ACC00006C6FAA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		8497BE5B249AD00F006C6FAA /* IllnessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessModel.swift; sourceTree = "<group>"; };
 		8497BE5D249AE59D006C6FAA /* IllnessListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessListViewModel.swift; sourceTree = "<group>"; };
@@ -166,6 +170,15 @@
 				8418A706249C7B7400F46404 /* Info.plist */,
 			);
 			path = "Hospital FinderUITests";
+			sourceTree = "<group>";
+		};
+		8418A710249CA14000F46404 /* Seervice Handller */ = {
+			isa = PBXGroup;
+			children = (
+				8418A711249CA14000F46404 /* IllnessListHandling.swift */,
+				8418A712249CA14000F46404 /* HospitalListHandling.swift */,
+			);
+			path = "Seervice Handller";
 			sourceTree = "<group>";
 		};
 		8497BE23249ABFF9006C6FAA = {
@@ -250,7 +263,8 @@
 		8497BE47249AC098006C6FAA /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				8497BE57249ACBA2006C6FAA /* APIService.swift */,
+				8418A710249CA14000F46404 /* Seervice Handller */,
+				8497BE57249ACBA2006C6FAA /* WebService.swift */,
 				8418A6EB249C4A0000F46404 /* DBService.swift */,
 			);
 			path = Service;
@@ -573,6 +587,7 @@
 				8418A6EE249C4A6C00F46404 /* PatientModel.swift in Sources */,
 				8497BE74249B4342006C6FAA /* PainLevelViewModel.swift in Sources */,
 				8497BE4A249AC132006C6FAA /* HospitalListVC.swift in Sources */,
+				8418A714249CA14000F46404 /* HospitalListHandling.swift in Sources */,
 				8497BE5A249ACC00006C6FAA /* AppConstants.swift in Sources */,
 				8497BE60249AFDC7006C6FAA /* TableView+Extension.swift in Sources */,
 				8497BE72249B3AA5006C6FAA /* Common.swift in Sources */,
@@ -588,12 +603,13 @@
 				8497BE6D249B338D006C6FAA /* SelectPainLevelVC.swift in Sources */,
 				8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */,
 				8497BE7F249B4D86006C6FAA /* HospitalViewModel.swift in Sources */,
-				8497BE58249ACBA2006C6FAA /* APIService.swift in Sources */,
+				8497BE58249ACBA2006C6FAA /* WebService.swift in Sources */,
 				8497BE56249AC6C7006C6FAA /* TableviewCell+Extension.swift in Sources */,
 				8497BE67249B05FE006C6FAA /* IllnessViewModel.swift in Sources */,
 				8497BE7C249B4CC9006C6FAA /* HospitalListViewModel.swift in Sources */,
 				8497BE76249B4A3F006C6FAA /* HospitalListModel.swift in Sources */,
 				8418A6EC249C4A0000F46404 /* DBService.swift in Sources */,
+				8418A713249CA14000F46404 /* IllnessListHandling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,7 +776,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -814,7 +830,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
