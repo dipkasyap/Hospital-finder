@@ -28,24 +28,12 @@ class IllnessListViewModel {
      - Parameter then: (success: Bool, error: Error)->())
      */
     func getIlleness(_ then: @escaping (_:Bool, _:Error?)->()) {
-        
-        guard let url = URL(string: AppConstants.URL.illness) else {
-            print("Cannot parse url")
-            return
-        }
-        
-        let illnessListResource = Resource<IllnessListModel>(url: url) { data in
-            
-            let illnessData = try? JSONDecoder().decode(IllnessListModel.self, from: data)
-            return illnessData
-        }
-        
-        APIService().load(resource: illnessListResource) { [weak self] result, error in
-            
-            if let illnessData = result {
+        IllnessListHandler(withWebService: WebService()).getIllnesses{ [weak self] (illnessListModel, error) in
+
+            if let illnessListModel = illnessListModel {
                 
-                self?.illnessData = illnessData
-                if let illnessModel = illnessData.illnesses {
+                self?.illnessData = illnessListModel
+                if let illnessModel = illnessListModel.illnesses {
                     self?.illnesses = illnessModel.map{IllnessViewModel($0)}
                 }
                 then(true, nil)
