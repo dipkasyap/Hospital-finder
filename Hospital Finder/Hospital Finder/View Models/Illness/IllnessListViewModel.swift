@@ -14,7 +14,6 @@ class IllnessListViewModel {
     private var illnessData: IllnessListModel?
     private(set) var illnesses = [IllnessViewModel]()
 
-    
     var numbersOfIllness: Int  {
         return self.illnesses.count
     }
@@ -23,7 +22,6 @@ class IllnessListViewModel {
           return self.illnesses[index]
       }
     
-        
     /**
      Calls Illness getter API
      - returns: (success, error?)
