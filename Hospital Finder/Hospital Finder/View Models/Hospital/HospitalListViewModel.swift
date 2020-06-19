@@ -40,7 +40,7 @@ class HospitalListViewModel {
             let hospitalData = try? JSONDecoder().decode(HospitalListModel.self, from: data)
             return hospitalData
         }
-        
+                
         APIService().load(resource: hospitalListResource) { [weak self] result, error in
             
             
@@ -57,7 +57,6 @@ class HospitalListViewModel {
                 //error
                 then(false, error)
             }
-            
         }
     }
     

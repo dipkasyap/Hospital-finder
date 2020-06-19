@@ -43,6 +43,7 @@ extension SelectIllnessVC {
 //MARK:- Service call
 extension SelectIllnessVC {
     @objc private func getIllness() {
+        ProgressHud.showIn(self.view)
         illnessListViewModel.getIlleness{ [weak self] success, error in
             if success {
                 //reload table
@@ -52,6 +53,7 @@ extension SelectIllnessVC {
             }
             self?.refreshControl.endRefreshing()
         }
+        ProgressHud.hide()
     }
 }
 

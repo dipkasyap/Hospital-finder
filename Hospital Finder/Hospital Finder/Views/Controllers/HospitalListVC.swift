@@ -55,6 +55,7 @@ extension HospitalListVC {
 //MARK:- Service call
 extension HospitalListVC {
     @objc private func getHospitals() {
+        ProgressHud.showIn(self.view)
         hospitalViewModel.getHospitals{ [weak self] success, error in
             if success {
                 if let painLevel = self?.painLevelViewModel.painLevel {
@@ -65,6 +66,7 @@ extension HospitalListVC {
                 //show error alert
             }
             self?.refreshControl.endRefreshing()
+            ProgressHud.hide()
         }
     }
 }
