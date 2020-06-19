@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import NotificationBannerSwift
 
 class IllnessListViewModel {
     
@@ -44,7 +45,6 @@ class IllnessListViewModel {
         
         APIService().load(resource: illnessListResource) { [weak self] result, error in
             
-            
             if let illnessData = result {
                 
                 self?.illnessData = illnessData
@@ -55,6 +55,8 @@ class IllnessListViewModel {
                 
             } else {
                 //error
+                let banner = FloatingNotificationBanner(subtitle: error?.localizedDescription, style: .danger)
+                banner.show()
                 then(false, error)
             }
             

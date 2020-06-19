@@ -46,7 +46,6 @@ extension SelectIllnessVC {
         ProgressHud.showIn(self.view)
         illnessListViewModel.getIlleness{ [weak self] success, error in
             if success {
-                //reload table
                 self?.illnessTableView.reloadData()
             } else {
                 //show error alert

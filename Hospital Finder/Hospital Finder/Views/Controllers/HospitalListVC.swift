@@ -62,9 +62,7 @@ extension HospitalListVC {
                     self?.hospitalViewModel.applyPainLevel(painLevel)
                 }
                 self?.hospitalsTableView.reloadData()
-            } else {
-                //show error alert
-            }
+            } 
             self?.refreshControl.endRefreshing()
             ProgressHud.hide()
         }

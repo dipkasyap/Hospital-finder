@@ -8,6 +8,7 @@ target 'Hospital Finder' do
   # Pods for Hospital Finder
 
   pod 'SVProgressHUD'
+  pod 'NotificationBannerSwift', '~> 3.0.0'
 
 
 end

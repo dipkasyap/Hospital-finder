@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8418A6E2249C25AC00F46404 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6E1249C25AC00F46404 /* Int+Extension.swift */; };
 		8418A6E4249C31AB00F46404 /* ProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6E3249C31AB00F46404 /* ProgressHud.swift */; };
+		8418A6E6249C3AF200F46404 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6E5249C3AF200F46404 /* Alert.swift */; };
 		8497BE30249ABFF9006C6FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE2F249ABFF9006C6FAA /* AppDelegate.swift */; };
 		8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE31249ABFF9006C6FAA /* SceneDelegate.swift */; };
 		8497BE34249ABFF9006C6FAA /* SelectIllnessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE33249ABFF9006C6FAA /* SelectIllnessVC.swift */; };
@@ -45,6 +46,7 @@
 		35B7724DFD4F9BDF8F2AACF0 /* Pods-Hospital Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hospital Finder.debug.xcconfig"; path = "Target Support Files/Pods-Hospital Finder/Pods-Hospital Finder.debug.xcconfig"; sourceTree = "<group>"; };
 		8418A6E1249C25AC00F46404 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		8418A6E3249C31AB00F46404 /* ProgressHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHud.swift; sourceTree = "<group>"; };
+		8418A6E5249C3AF200F46404 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8497BE2C249ABFF9006C6FAA /* Hospital Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hospital Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8497BE2F249ABFF9006C6FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8497BE31249ABFF9006C6FAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				8497BE4D249AC385006C6FAA /* StoryboardHelper.swift */,
+				8418A6E5249C3AF200F46404 /* Alert.swift */,
 				8497BE55249AC6C7006C6FAA /* TableviewCell+Extension.swift */,
 				8497BE5F249AFDC7006C6FAA /* TableView+Extension.swift */,
 				8497BE59249ACC00006C6FAA /* AppConstants.swift */,
@@ -434,6 +437,7 @@
 				8497BE4E249AC385006C6FAA /* StoryboardHelper.swift in Sources */,
 				8497BE5C249AD00F006C6FAA /* IllnessModel.swift in Sources */,
 				8497BE6D249B338D006C6FAA /* SelectPainLevelVC.swift in Sources */,
+				8418A6E6249C3AF200F46404 /* Alert.swift in Sources */,
 				8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */,
 				8497BE7F249B4D86006C6FAA /* HospitalViewModel.swift in Sources */,
 				8497BE58249ACBA2006C6FAA /* APIService.swift in Sources */,
