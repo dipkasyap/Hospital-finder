@@ -1,38 +1,52 @@
 PODS:
+  - Cuckoo (1.4.0):
+    - Cuckoo/Swift (= 1.4.0)
+  - Cuckoo/Swift (1.4.0)
   - MarqueeLabel (4.0.2)
+  - Nimble (8.1.1)
   - NotificationBannerSwift (3.0.2):
     - MarqueeLabel (~> 4.0.0)
     - SnapKit (~> 5.0.0)
-  - Realm (5.0.3):
-    - Realm/Headers (= 5.0.3)
-  - Realm/Headers (5.0.3)
-  - RealmSwift (5.0.3):
-    - Realm (= 5.0.3)
+  - Quick (3.0.0)
+  - Realm (5.0.2):
+    - Realm/Headers (= 5.0.2)
+  - Realm/Headers (5.0.2)
+  - RealmSwift (5.0.2):
+    - Realm (= 5.0.2)
   - SnapKit (5.0.1)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - Cuckoo (~> 1.4.0)
+  - Nimble (~> 8.1.1)
   - NotificationBannerSwift (~> 3.0.0)
+  - Quick (~> 3.0.0)
   - RealmSwift
   - SVProgressHUD
 
 SPEC REPOS:
   trunk:
+    - Cuckoo
     - MarqueeLabel
+    - Nimble
     - NotificationBannerSwift
+    - Quick
     - Realm
     - RealmSwift
     - SnapKit
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  Cuckoo: da26594ea25d227d788cd2f25466442a4348c486
   MarqueeLabel: f762aa681ae201f66c1d511858b171f75d83013a
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
   NotificationBannerSwift: 713e20f21b6105f4a36a00e5d9fa414a930d3d8e
-  Realm: bfca1699b61b0b17c3a69ae0e648314eae91fbdb
-  RealmSwift: 493c9f089cd3893b3959007973c0e4f640906ba0
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  Realm: 6b6f096671b64b04d08974177cabb2ff9343d153
+  RealmSwift: a3db6be0488bf3e1d5314c2956cefe98a65cdd01
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 3c6cb27db0834b62fd5aff38d640537ac7857be4
+PODFILE CHECKSUM: a0757ce05a75b1702b5a54149d0f81ab355ca7da
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

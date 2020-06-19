@@ -11,4 +11,16 @@ target 'Hospital Finder' do
   pod 'NotificationBannerSwift', '~> 3.0.0'
   pod 'RealmSwift'
 
+  target 'Hospital FinderTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Quick', '~> 3.0.0'
+    pod 'Nimble', '~> 8.1.1'
+    pod 'Cuckoo', '~> 1.4.0'
+  end
+
+  target 'Hospital FinderUITests' do
+    # Pods for testing
+  end
+
 end
