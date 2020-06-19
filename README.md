@@ -1,5 +1,9 @@
 
 # Hospital finder 
+
+A mobile app project to the response of:
+* "The year is 2025 and the worldwide zombie apocalypse has reached its peak moment in Sydney. The city is in chaos due to zombies biting and chasing regular citizens on the streets. This horrendous tragedy has caused all the hospitals within Sydney to become overcrowded, people with different diseases and triages have jammed hospital emergency rooms as they wait for their treatments. Is anyone there to help hospitals form overflow?"
+
 ## Requirements:
 * iOS 13.0+
 * Xcode 11.4.1
