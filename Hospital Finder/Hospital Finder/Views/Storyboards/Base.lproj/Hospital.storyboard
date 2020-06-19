@@ -75,7 +75,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fFc-E7-Pen">
-                                <rect key="frame" x="20" y="131" width="374" height="731"/>
+                                <rect key="frame" x="20" y="152.5" width="374" height="709.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our suggested Hospitals:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGh-oc-aY2">
@@ -84,14 +84,23 @@
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" red="0.96052604909999995" green="0.96448701619999999" blue="0.98095923659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Illness" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yo6-rl-rcR">
+                                <rect key="frame" x="20" y="111" width="374" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.54886978860000002" green="0.55291134119999996" blue="0.55686062569999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96052604909999995" green="0.96448701619999999" blue="0.98095923659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fFc-E7-Pen" firstAttribute="top" secondItem="oGh-oc-aY2" secondAttribute="bottom" constant="30" id="5Mo-gy-nvJ"/>
+                            <constraint firstItem="fFc-E7-Pen" firstAttribute="top" secondItem="yo6-rl-rcR" secondAttribute="bottom" constant="20" id="4Rd-Je-Hx8"/>
                             <constraint firstItem="fFc-E7-Pen" firstAttribute="leading" secondItem="QDM-4W-QXT" secondAttribute="leading" constant="20" id="8jP-Ke-LIp"/>
+                            <constraint firstItem="yo6-rl-rcR" firstAttribute="leading" secondItem="oGh-oc-aY2" secondAttribute="leading" id="COT-Y9-sLf"/>
+                            <constraint firstItem="yo6-rl-rcR" firstAttribute="top" secondItem="oGh-oc-aY2" secondAttribute="bottom" constant="10" id="I3y-9k-P5d"/>
                             <constraint firstItem="QDM-4W-QXT" firstAttribute="bottom" secondItem="fFc-E7-Pen" secondAttribute="bottom" id="II4-1I-HBo"/>
                             <constraint firstItem="oGh-oc-aY2" firstAttribute="top" secondItem="QDM-4W-QXT" secondAttribute="top" constant="30" id="RNc-lk-So6"/>
                             <constraint firstItem="oGh-oc-aY2" firstAttribute="leading" secondItem="fFc-E7-Pen" secondAttribute="leading" id="SM9-9b-OLr"/>
+                            <constraint firstItem="yo6-rl-rcR" firstAttribute="trailing" secondItem="oGh-oc-aY2" secondAttribute="trailing" id="aE5-vq-bKq"/>
                             <constraint firstItem="QDM-4W-QXT" firstAttribute="trailing" secondItem="oGh-oc-aY2" secondAttribute="trailing" constant="20" id="fxu-Pr-XOi"/>
                             <constraint firstItem="QDM-4W-QXT" firstAttribute="trailing" secondItem="fFc-E7-Pen" secondAttribute="trailing" constant="20" id="n0f-og-FxU"/>
                         </constraints>
@@ -100,12 +109,13 @@
                     <navigationItem key="navigationItem" id="Ye4-0F-f1d"/>
                     <connections>
                         <outlet property="hospitalsTableView" destination="fFc-E7-Pen" id="00X-cR-t6r"/>
+                        <outlet property="illnessInfoLabel" destination="yo6-rl-rcR" id="BHY-ey-mJE"/>
                         <outlet property="titleLabel" destination="oGh-oc-aY2" id="vE7-mB-I15"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWi-1c-lHz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2162" y="102"/>
+            <point key="canvasLocation" x="2160.8695652173915" y="101.78571428571428"/>
         </scene>
         <!--Select Pain LevelVC-->
         <scene sceneID="50n-Wr-nO8">

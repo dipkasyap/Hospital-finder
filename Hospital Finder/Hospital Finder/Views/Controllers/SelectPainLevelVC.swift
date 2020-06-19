@@ -36,7 +36,8 @@ class SelectPainLevelVC: UIViewController {
 extension SelectPainLevelVC {
     private func setupUI() {
         title = "Pain Level"
-        titleLabel.textColor = AppConstants.Color.subtitleGray
+        titleLabel.textColor = AppConstants.Color.titleGray
+        illnessLabel.textColor = AppConstants.Color.subtitleGray
         illnessLabel.text = illnessViewModel.name
     }
 }

@@ -30,7 +30,7 @@ class SelectIllnessVC: UIViewController {
 extension SelectIllnessVC {
     private func setupUI() {
         title = "Illness"
-        titleLabel.textColor = AppConstants.Color.subtitleGray
+        titleLabel.textColor = AppConstants.Color.titleGray
         illnessTableView.register(IllnessCell.self)
         illnessTableView.separatorStyle = .none
         illnessTableView.estimatedRowHeight = UITableView.automaticDimension
