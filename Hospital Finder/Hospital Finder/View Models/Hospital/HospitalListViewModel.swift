@@ -22,6 +22,13 @@ class HospitalListViewModel {
     func hospitals(forIndex index: Int)-> HospitalViewModel  {
           return self.hospitals[index]
       }
+    
+    private let hospitalListHandler: HospitalListHandler
+
+    
+    init(withHospitalistHandling hospitalListHandler: HospitalListHandler = HospitalListHandler()) {
+          self.hospitalListHandler = hospitalListHandler
+      }
         
     /**
      Calls Illness getter API
@@ -30,7 +37,7 @@ class HospitalListViewModel {
      */
     func getHospitals(_ then: @escaping (_:Bool, _:Error?)->()) {
         
-        HospitalListHandler(withWebService: WebService()).getHospitals { [weak self] (hospitalListModel, error) in
+        hospitalListHandler.getHospitals { [weak self] (hospitalListModel, error) in
             if let hospitalData = hospitalListModel {
                 
                 self?.hospitalData = hospitalData
