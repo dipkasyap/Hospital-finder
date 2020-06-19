@@ -186,18 +186,19 @@
 			path = "Hospital FinderUITests";
 			sourceTree = "<group>";
 		};
-		8418A710249CA14000F46404 /* Seervice Handller */ = {
+		8418A710249CA14000F46404 /* SeerviceHandller */ = {
 			isa = PBXGroup;
 			children = (
 				8418A711249CA14000F46404 /* IllnessListHandling.swift */,
 				8418A712249CA14000F46404 /* HospitalListHandling.swift */,
 			);
-			path = "Seervice Handller";
+			path = SeerviceHandller;
 			sourceTree = "<group>";
 		};
 		8497BE23249ABFF9006C6FAA = {
 			isa = PBXGroup;
 			children = (
+				AFA8271A249CC896005535A5 /* Build scripts */,
 				8497BE2E249ABFF9006C6FAA /* Hospital Finder */,
 				8418A6F5249C76AE00F46404 /* Hospital FinderTests */,
 				8418A703249C7B7400F46404 /* Hospital FinderUITests */,
@@ -277,7 +278,7 @@
 		8497BE47249AC098006C6FAA /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				8418A710249CA14000F46404 /* Seervice Handller */,
+				8418A710249CA14000F46404 /* SeerviceHandller */,
 				8497BE57249ACBA2006C6FAA /* WebService.swift */,
 				8418A6EB249C4A0000F46404 /* DBService.swift */,
 			);
@@ -392,6 +393,13 @@
 				8497BE82249B52E8006C6FAA /* HospitalCell.xib */,
 			);
 			path = "Hospital Cell";
+			sourceTree = "<group>";
+		};
+		AFA8271A249CC896005535A5 /* Build scripts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Build scripts";
 			sourceTree = "<group>";
 		};
 		FF37AE8DFFD8E60C0481EE88 /* Frameworks */ = {
