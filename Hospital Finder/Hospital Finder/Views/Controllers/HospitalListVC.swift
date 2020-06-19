@@ -12,9 +12,12 @@ import MapKit
 
 class HospitalListVC: UIViewController {
     
-    @IBOutlet weak var hospitalsTableView: UITableView!
-    let refreshControl = UIRefreshControl()
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var illnessInfoLabel: UILabel!
 
+    @IBOutlet weak var hospitalsTableView: UITableView!
+    private let refreshControl = UIRefreshControl()
+    
     private var illnessViewModel: IllnessViewModel!
     private var painLevelViewModel: PainLevelViewModel = PainLevelViewModel()
     private var hospitalViewModel: HospitalListViewModel = HospitalListViewModel()
@@ -28,11 +31,11 @@ class HospitalListVC: UIViewController {
     }
     
     //MARK:- View cycle
-       override func viewDidLoad() {
-           super.viewDidLoad()
-           setupUI()
-           getHospitals()
-       }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        getHospitals()
+    }
     
 }
 
@@ -40,8 +43,12 @@ class HospitalListVC: UIViewController {
 extension HospitalListVC {
     private func setupUI() {
         title = "Hospitals"
+        titleLabel.textColor = AppConstants.Color.titleGray
+        illnessInfoLabel.text = "Illness: \(illnessViewModel.name ?? "na")\nPain level: \(painLevelViewModel.painLevel?.description ?? "na")"
+        
         hospitalsTableView.register(HospitalCell.self)
         hospitalsTableView.separatorStyle = .none
+        hospitalsTableView.estimatedRowHeight = UITableView.automaticDimension
         refreshControl.addTarget(self, action: #selector(getHospitals), for: .valueChanged)
         hospitalsTableView.addSubview(refreshControl)
         hospitalsTableView.dataSource = self
@@ -54,14 +61,16 @@ extension HospitalListVC {
 //MARK:- Service call
 extension HospitalListVC {
     @objc private func getHospitals() {
+        ProgressHud.showIn(self.view)
         hospitalViewModel.getHospitals{ [weak self] success, error in
             if success {
-                //reload table
+                if let painLevel = self?.painLevelViewModel.painLevel {
+                    self?.hospitalViewModel.applyPainLevel(painLevel)
+                }
                 self?.hospitalsTableView.reloadData()
-            } else {
-                //show error alert
-            }
+            } 
             self?.refreshControl.endRefreshing()
+            ProgressHud.hide()
         }
     }
 }
@@ -69,10 +78,32 @@ extension HospitalListVC {
 
 //MARK:- Actions
 extension HospitalListVC {
+    
+    fileprivate func savePatientInfoOnDB(forHospital hospital: HospitalViewModel) {
+        DBService.savePatient(
+            withIllness: illnessViewModel,
+            andPainLevel: painLevelViewModel.painLevel!,
+            forHospital: hospital) { result in
+                
+                switch result{
+                case .success:
+                    showOnMap(hospital)
+                    break
+                case .failure:
+                    break
+                }
+        }
+    }
+    
     fileprivate func showOnMap(_ hospital: HospitalViewModel  ) {
-//        let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude:address.latitude, longitude:address.longitude)))
-//        destination.name = address.addressLine1
-//        MKMapItem.openMaps(with: [destination], launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
+        
+        guard let lat = hospital.location?.lat, let long = hospital.location?.long else {
+            print("Location not found")
+            return
+        }
+        let destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long)))
+        destination.name = hospital.name
+        MKMapItem.openMaps(with: [destination], launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
     }
 }
 
@@ -98,7 +129,15 @@ extension HospitalListVC: UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.zoomIn()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [unowned self] in
-            self.showOnMap(self.hospitalViewModel.hospitals(forIndex: indexPath.row))
+            self.savePatientInfoOnDB(forHospital: self.hospitalViewModel.hospitals(forIndex: indexPath.row))
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }

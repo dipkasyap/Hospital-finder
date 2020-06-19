@@ -33,7 +33,7 @@ struct AppConstants {
             return #colorLiteral(red: 0.9605260491, green: 0.9644870162, blue: 0.9809592366, alpha: 1)
         }
         
-        static var discloseButton: UIColor {
+        static var appRed: UIColor {
             return #colorLiteral(red: 0.7163607478, green: 0.3237760365, blue: 0.4537965059, alpha: 1)
         }
         

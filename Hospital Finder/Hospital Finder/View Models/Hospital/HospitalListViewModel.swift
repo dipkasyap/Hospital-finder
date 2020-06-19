@@ -8,21 +8,18 @@
 
 
 import Foundation
+import NotificationBannerSwift
 
 class HospitalListViewModel {
     
     private var hospitalData: HospitalListModel?
     private(set) var hospitals = [HospitalViewModel]()
-
-    //get patient Pain level and filter Hospitals
     
     var numbersOfHospitals: Int  {
-        //apply filter
         return self.hospitals.count
     }
     
     func hospitals(forIndex index: Int)-> HospitalViewModel  {
-            //apply filter
           return self.hospitals[index]
       }
     
@@ -44,9 +41,8 @@ class HospitalListViewModel {
             let hospitalData = try? JSONDecoder().decode(HospitalListModel.self, from: data)
             return hospitalData
         }
-        
+                
         APIService().load(resource: hospitalListResource) { [weak self] result, error in
-            
             
             if let hospitalData = result {
                 
@@ -56,13 +52,25 @@ class HospitalListViewModel {
                     self?.hospitals = hospitalModel.map{HospitalViewModel($0)}
                 }
                 then(true, nil)
-                                
+                                                
             } else {
                 //error
+                let banner = FloatingNotificationBanner(subtitle: error?.localizedDescription, style: .danger)
+                banner.show()
                 then(false, error)
             }
-            
         }
     }
+    
+    
+    /// Sorts the hospitals with calculating waiting time for pain level provided
+    /// - Parameter painLevel: PainLevel
+    func applyPainLevel(_ painLevel: PainLevel) {
+        hospitals.forEach { (aHospital) in
+            aHospital.calculate(waitingTimeForPainLevel: painLevel)
+        }
+        hospitals.sort{$0.waitingTime < $1.waitingTime}
+    }
+    
 }
 

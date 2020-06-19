@@ -52,7 +52,6 @@ struct Hospital : Codable {
     
 }
 
-
 struct WaitingList : Codable {
     let patientCount : Int?
     let levelOfPain : Int?
@@ -73,7 +72,6 @@ struct WaitingList : Codable {
     }
     
 }
-
 
 struct Location : Codable {
     let lat : Double?

@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8418A6E2249C25AC00F46404 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6E1249C25AC00F46404 /* Int+Extension.swift */; };
+		8418A6E4249C31AB00F46404 /* ProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6E3249C31AB00F46404 /* ProgressHud.swift */; };
+		8418A6EC249C4A0000F46404 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6EB249C4A0000F46404 /* DBService.swift */; };
+		8418A6EE249C4A6C00F46404 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6ED249C4A6C00F46404 /* PatientModel.swift */; };
+		8418A6F7249C76AE00F46404 /* Hospital_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6F6249C76AE00F46404 /* Hospital_FinderTests.swift */; };
+		8418A705249C7B7400F46404 /* Hospital_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A704249C7B7400F46404 /* Hospital_FinderUITests.swift */; };
 		8497BE30249ABFF9006C6FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE2F249ABFF9006C6FAA /* AppDelegate.swift */; };
 		8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE31249ABFF9006C6FAA /* SceneDelegate.swift */; };
 		8497BE34249ABFF9006C6FAA /* SelectIllnessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE33249ABFF9006C6FAA /* SelectIllnessVC.swift */; };
@@ -35,9 +41,39 @@
 		8497BE7F249B4D86006C6FAA /* HospitalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE7E249B4D86006C6FAA /* HospitalViewModel.swift */; };
 		8497BE83249B52E8006C6FAA /* HospitalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE81249B52E8006C6FAA /* HospitalCell.swift */; };
 		8497BE84249B52E8006C6FAA /* HospitalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8497BE82249B52E8006C6FAA /* HospitalCell.xib */; };
+		FD1BCEAB3636CBA4E3401882 /* Pods_Hospital_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED4CC9EDAA6DB159733FC02 /* Pods_Hospital_Finder.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8418A6F9249C76AE00F46404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8497BE24249ABFF9006C6FAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8497BE2B249ABFF9006C6FAA;
+			remoteInfo = "Hospital Finder";
+		};
+		8418A707249C7B7400F46404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8497BE24249ABFF9006C6FAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8497BE2B249ABFF9006C6FAA;
+			remoteInfo = "Hospital Finder";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2F760F8B915006DB54D161EE /* Pods-Hospital Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hospital Finder.release.xcconfig"; path = "Target Support Files/Pods-Hospital Finder/Pods-Hospital Finder.release.xcconfig"; sourceTree = "<group>"; };
+		35B7724DFD4F9BDF8F2AACF0 /* Pods-Hospital Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hospital Finder.debug.xcconfig"; path = "Target Support Files/Pods-Hospital Finder/Pods-Hospital Finder.debug.xcconfig"; sourceTree = "<group>"; };
+		8418A6E1249C25AC00F46404 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		8418A6E3249C31AB00F46404 /* ProgressHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHud.swift; sourceTree = "<group>"; };
+		8418A6EB249C4A0000F46404 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		8418A6ED249C4A6C00F46404 /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
+		8418A6F4249C76AE00F46404 /* Hospital FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hospital FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8418A6F6249C76AE00F46404 /* Hospital_FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital_FinderTests.swift; sourceTree = "<group>"; };
+		8418A6F8249C76AE00F46404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8418A702249C7B7400F46404 /* Hospital FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hospital FinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8418A704249C7B7400F46404 /* Hospital_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital_FinderUITests.swift; sourceTree = "<group>"; };
+		8418A706249C7B7400F46404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8497BE2C249ABFF9006C6FAA /* Hospital Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hospital Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8497BE2F249ABFF9006C6FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8497BE31249ABFF9006C6FAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,24 +104,79 @@
 		8497BE7E249B4D86006C6FAA /* HospitalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewModel.swift; sourceTree = "<group>"; };
 		8497BE81249B52E8006C6FAA /* HospitalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalCell.swift; sourceTree = "<group>"; };
 		8497BE82249B52E8006C6FAA /* HospitalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalCell.xib; sourceTree = "<group>"; };
+		8ED4CC9EDAA6DB159733FC02 /* Pods_Hospital_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hospital_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8497BE29249ABFF9006C6FAA /* Frameworks */ = {
+		8418A6F1249C76AE00F46404 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8418A6FF249C7B7400F46404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8497BE29249ABFF9006C6FAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1BCEAB3636CBA4E3401882 /* Pods_Hospital_Finder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0422B74CBFC367EA83D4F79A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35B7724DFD4F9BDF8F2AACF0 /* Pods-Hospital Finder.debug.xcconfig */,
+				2F760F8B915006DB54D161EE /* Pods-Hospital Finder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8418A6EF249C4A7100F46404 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				8418A6ED249C4A6C00F46404 /* PatientModel.swift */,
+			);
+			path = Patient;
+			sourceTree = "<group>";
+		};
+		8418A6F5249C76AE00F46404 /* Hospital FinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				8418A6F6249C76AE00F46404 /* Hospital_FinderTests.swift */,
+				8418A6F8249C76AE00F46404 /* Info.plist */,
+			);
+			path = "Hospital FinderTests";
+			sourceTree = "<group>";
+		};
+		8418A703249C7B7400F46404 /* Hospital FinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8418A704249C7B7400F46404 /* Hospital_FinderUITests.swift */,
+				8418A706249C7B7400F46404 /* Info.plist */,
+			);
+			path = "Hospital FinderUITests";
+			sourceTree = "<group>";
+		};
 		8497BE23249ABFF9006C6FAA = {
 			isa = PBXGroup;
 			children = (
 				8497BE2E249ABFF9006C6FAA /* Hospital Finder */,
+				8418A6F5249C76AE00F46404 /* Hospital FinderTests */,
+				8418A703249C7B7400F46404 /* Hospital FinderUITests */,
 				8497BE2D249ABFF9006C6FAA /* Products */,
+				0422B74CBFC367EA83D4F79A /* Pods */,
+				FF37AE8DFFD8E60C0481EE88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				8497BE2C249ABFF9006C6FAA /* Hospital Finder.app */,
+				8418A6F4249C76AE00F46404 /* Hospital FinderTests.xctest */,
+				8418A702249C7B7400F46404 /* Hospital FinderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +242,7 @@
 				8497BE7A249B4C91006C6FAA /* Illness */,
 				8497BE79249B4C89006C6FAA /* Hospital */,
 				8497BE71249B3AA5006C6FAA /* Common.swift */,
+				8418A6EF249C4A7100F46404 /* Patient */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				8497BE57249ACBA2006C6FAA /* APIService.swift */,
+				8418A6EB249C4A0000F46404 /* DBService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -188,6 +283,8 @@
 				8497BE59249ACC00006C6FAA /* AppConstants.swift */,
 				8497BE68249B24FD006C6FAA /* BoxShadowView.swift */,
 				8497BE6A249B27DE006C6FAA /* UIView+Extension.swift */,
+				8418A6E1249C25AC00F46404 /* Int+Extension.swift */,
+				8418A6E3249C31AB00F46404 /* ProgressHud.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -269,16 +366,62 @@
 			path = "Hospital Cell";
 			sourceTree = "<group>";
 		};
+		FF37AE8DFFD8E60C0481EE88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8ED4CC9EDAA6DB159733FC02 /* Pods_Hospital_Finder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8418A6F3249C76AE00F46404 /* Hospital FinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8418A6FB249C76AE00F46404 /* Build configuration list for PBXNativeTarget "Hospital FinderTests" */;
+			buildPhases = (
+				8418A6F0249C76AE00F46404 /* Sources */,
+				8418A6F1249C76AE00F46404 /* Frameworks */,
+				8418A6F2249C76AE00F46404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8418A6FA249C76AE00F46404 /* PBXTargetDependency */,
+			);
+			name = "Hospital FinderTests";
+			productName = "Hospital FinderTests";
+			productReference = 8418A6F4249C76AE00F46404 /* Hospital FinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8418A701249C7B7400F46404 /* Hospital FinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8418A709249C7B7400F46404 /* Build configuration list for PBXNativeTarget "Hospital FinderUITests" */;
+			buildPhases = (
+				8418A6FE249C7B7400F46404 /* Sources */,
+				8418A6FF249C7B7400F46404 /* Frameworks */,
+				8418A700249C7B7400F46404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8418A708249C7B7400F46404 /* PBXTargetDependency */,
+			);
+			name = "Hospital FinderUITests";
+			productName = "Hospital FinderUITests";
+			productReference = 8418A702249C7B7400F46404 /* Hospital FinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		8497BE2B249ABFF9006C6FAA /* Hospital Finder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8497BE40249ABFFA006C6FAA /* Build configuration list for PBXNativeTarget "Hospital Finder" */;
 			buildPhases = (
+				ABD9F425130D7096E98C74C0 /* [CP] Check Pods Manifest.lock */,
 				8497BE28249ABFF9006C6FAA /* Sources */,
 				8497BE29249ABFF9006C6FAA /* Frameworks */,
 				8497BE2A249ABFF9006C6FAA /* Resources */,
+				FC3AA45A4DA3B5CD36408614 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +442,14 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Devi Pd Ghimire";
 				TargetAttributes = {
+					8418A6F3249C76AE00F46404 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 8497BE2B249ABFF9006C6FAA;
+					};
+					8418A701249C7B7400F46404 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 8497BE2B249ABFF9006C6FAA;
+					};
 					8497BE2B249ABFF9006C6FAA = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -318,11 +469,27 @@
 			projectRoot = "";
 			targets = (
 				8497BE2B249ABFF9006C6FAA /* Hospital Finder */,
+				8418A6F3249C76AE00F46404 /* Hospital FinderTests */,
+				8418A701249C7B7400F46404 /* Hospital FinderUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8418A6F2249C76AE00F46404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8418A700249C7B7400F46404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8497BE2A249ABFF9006C6FAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,13 +504,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ABD9F425130D7096E98C74C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hospital Finder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC3AA45A4DA3B5CD36408614 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hospital Finder/Pods-Hospital Finder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hospital Finder/Pods-Hospital Finder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hospital Finder/Pods-Hospital Finder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		8418A6F0249C76AE00F46404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8418A6F7249C76AE00F46404 /* Hospital_FinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8418A6FE249C7B7400F46404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8418A705249C7B7400F46404 /* Hospital_FinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8497BE28249ABFF9006C6FAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8497BE83249B52E8006C6FAA /* HospitalCell.swift in Sources */,
+				8418A6E4249C31AB00F46404 /* ProgressHud.swift in Sources */,
 				8497BE5E249AE59D006C6FAA /* IllnessListViewModel.swift in Sources */,
+				8418A6EE249C4A6C00F46404 /* PatientModel.swift in Sources */,
 				8497BE74249B4342006C6FAA /* PainLevelViewModel.swift in Sources */,
 				8497BE4A249AC132006C6FAA /* HospitalListVC.swift in Sources */,
 				8497BE5A249ACC00006C6FAA /* AppConstants.swift in Sources */,
@@ -351,6 +578,7 @@
 				8497BE72249B3AA5006C6FAA /* Common.swift in Sources */,
 				8497BE34249ABFF9006C6FAA /* SelectIllnessVC.swift in Sources */,
 				8497BE54249AC637006C6FAA /* IllnessCell.swift in Sources */,
+				8418A6E2249C25AC00F46404 /* Int+Extension.swift in Sources */,
 				8497BE69249B24FD006C6FAA /* BoxShadowView.swift in Sources */,
 				8497BE6F249B36B8006C6FAA /* PainLevelButton.swift in Sources */,
 				8497BE6B249B27DE006C6FAA /* UIView+Extension.swift in Sources */,
@@ -365,10 +593,24 @@
 				8497BE67249B05FE006C6FAA /* IllnessViewModel.swift in Sources */,
 				8497BE7C249B4CC9006C6FAA /* HospitalListViewModel.swift in Sources */,
 				8497BE76249B4A3F006C6FAA /* HospitalListModel.swift in Sources */,
+				8418A6EC249C4A0000F46404 /* DBService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8418A6FA249C76AE00F46404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8497BE2B249ABFF9006C6FAA /* Hospital Finder */;
+			targetProxy = 8418A6F9249C76AE00F46404 /* PBXContainerItemProxy */;
+		};
+		8418A708249C7B7400F46404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8497BE2B249ABFF9006C6FAA /* Hospital Finder */;
+			targetProxy = 8418A707249C7B7400F46404 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8497BE35249ABFF9006C6FAA /* Hospital.storyboard */ = {
@@ -390,6 +632,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8418A6FC249C76AE00F46404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FH6G9M69MH;
+				INFOPLIST_FILE = "Hospital FinderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dip.Hospital-FinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hospital Finder.app/Hospital Finder";
+			};
+			name = Debug;
+		};
+		8418A6FD249C76AE00F46404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FH6G9M69MH;
+				INFOPLIST_FILE = "Hospital FinderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dip.Hospital-FinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hospital Finder.app/Hospital Finder";
+			};
+			name = Release;
+		};
+		8418A70A249C7B7400F46404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FH6G9M69MH;
+				INFOPLIST_FILE = "Hospital FinderUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dip.Hospital-FinderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Hospital Finder";
+			};
+			name = Debug;
+		};
+		8418A70B249C7B7400F46404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FH6G9M69MH;
+				INFOPLIST_FILE = "Hospital FinderUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dip.Hospital-FinderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Hospital Finder";
+			};
+			name = Release;
+		};
 		8497BE3E249ABFFA006C6FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -506,6 +826,7 @@
 		};
 		8497BE41249ABFFA006C6FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35B7724DFD4F9BDF8F2AACF0 /* Pods-Hospital Finder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -524,6 +845,7 @@
 		};
 		8497BE42249ABFFA006C6FAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F760F8B915006DB54D161EE /* Pods-Hospital Finder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +865,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8418A6FB249C76AE00F46404 /* Build configuration list for PBXNativeTarget "Hospital FinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8418A6FC249C76AE00F46404 /* Debug */,
+				8418A6FD249C76AE00F46404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8418A709249C7B7400F46404 /* Build configuration list for PBXNativeTarget "Hospital FinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8418A70A249C7B7400F46404 /* Debug */,
+				8418A70B249C7B7400F46404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8497BE27249ABFF9006C6FAA /* Build configuration list for PBXProject "Hospital Finder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

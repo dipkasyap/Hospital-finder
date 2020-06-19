@@ -11,8 +11,9 @@ import UIKit
 
 class SelectIllnessVC: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var illnessTableView: UITableView!
-    let refreshControl = UIRefreshControl()
+    private let refreshControl = UIRefreshControl()
     
     private var illnessListViewModel: IllnessListViewModel = IllnessListViewModel()
     
@@ -29,8 +30,10 @@ class SelectIllnessVC: UIViewController {
 extension SelectIllnessVC {
     private func setupUI() {
         title = "Illness"
+        titleLabel.textColor = AppConstants.Color.titleGray
         illnessTableView.register(IllnessCell.self)
         illnessTableView.separatorStyle = .none
+        illnessTableView.estimatedRowHeight = UITableView.automaticDimension
         refreshControl.addTarget(self, action: #selector(getIllness), for: .valueChanged)
         illnessTableView.addSubview(refreshControl)
         illnessTableView.dataSource = self
@@ -42,14 +45,13 @@ extension SelectIllnessVC {
 //MARK:- Service call
 extension SelectIllnessVC {
     @objc private func getIllness() {
+        ProgressHud.showIn(self.view)
         illnessListViewModel.getIlleness{ [weak self] success, error in
             if success {
-                //reload table
                 self?.illnessTableView.reloadData()
-            } else {
-                //show error alert
-            }
+            } 
             self?.refreshControl.endRefreshing()
+            ProgressHud.hide()
         }
     }
 }
@@ -86,5 +88,13 @@ extension SelectIllnessVC: UITableViewDelegate {
             self.checkPainLevel(forIllness: self.illnessListViewModel.illness(forIndex: indexPath.row))
         }
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+         return UITableView.automaticDimension
+     }
+     
+     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+         return 100
+     }
 }
 

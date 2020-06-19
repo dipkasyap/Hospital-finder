@@ -31,7 +31,6 @@ class  PainLevelButton: UIButton {
         layer.shadowPath = shadowPath.cgPath
         layer.borderWidth = 1
         
-        
         toggle()
     }
     

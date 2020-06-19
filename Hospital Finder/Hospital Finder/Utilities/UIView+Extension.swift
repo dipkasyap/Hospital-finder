@@ -11,7 +11,6 @@ import Foundation
 
 extension UIView {
     func zoomIn() {
-
         let scale: CGFloat = 0.95
         let duration: TimeInterval = 0.1
         UIView.animate(withDuration: duration, animations: {

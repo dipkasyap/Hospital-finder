@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
+    lazy var window: UIWindow? = {
+        return UIApplication.shared.windows.first
+    }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -20,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            print(exception.callStackSymbols)
         }
         
+        realmConfig()
         configureNavBar()
         
         return true
@@ -46,9 +51,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     fileprivate func configureNavBar() {
-        UINavigationBar.appearance().barTintColor = UIColor(displayP3Red: 52/255, green: 152/255, blue: 219/255, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = AppConstants.Color.hospitalBlue
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UIBarButtonItem.appearance().tintColor = UIColor.white
+    }
+}
+
+
+extension AppDelegate {
+    /// Need to update if migration is required
+    fileprivate func realmConfig() {
+        var config = Realm.Configuration()
+        config.deleteRealmIfMigrationNeeded = true
+        Realm.Configuration.defaultConfiguration = config
     }
 }

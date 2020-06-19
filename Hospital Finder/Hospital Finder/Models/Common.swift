@@ -15,4 +15,20 @@ enum PainLevel: Int, Codable {
     case moderate = 2
     case high = 3
     case dangerous = 4
+    
+    var description: String {
+        switch self {
+        case .least:
+            return "low"
+        case .mild:
+            return "mild"
+        case .moderate:
+            return "moderate"
+        case .high:
+            return "high"
+        case .dangerous:
+            return "dangerous"
+            
+        }
+    }
 }

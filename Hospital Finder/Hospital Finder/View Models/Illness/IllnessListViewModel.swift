@@ -7,13 +7,13 @@
 //
 
 import Foundation
+import NotificationBannerSwift
 
 class IllnessListViewModel {
     
     private var illnessData: IllnessListModel?
     private(set) var illnesses = [IllnessViewModel]()
 
-    
     var numbersOfIllness: Int  {
         return self.illnesses.count
     }
@@ -22,8 +22,6 @@ class IllnessListViewModel {
           return self.illnesses[index]
       }
     
-    
-        
     /**
      Calls Illness getter API
      - returns: (success, error?)
@@ -44,7 +42,6 @@ class IllnessListViewModel {
         
         APIService().load(resource: illnessListResource) { [weak self] result, error in
             
-            
             if let illnessData = result {
                 
                 self?.illnessData = illnessData
@@ -55,6 +52,8 @@ class IllnessListViewModel {
                 
             } else {
                 //error
+                let banner = FloatingNotificationBanner(subtitle: error?.localizedDescription, style: .danger)
+                banner.show()
                 then(false, error)
             }
             

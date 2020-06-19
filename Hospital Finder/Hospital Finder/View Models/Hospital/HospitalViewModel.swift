@@ -16,15 +16,24 @@ class HospitalViewModel {
         return hospital.name
     }
     
-    var id: String? {
-         return hospital.name
+    var id: Int? {
+         return hospital.id
      }
     
     var location : (lat: Double?, long:Double?)? {
         return (hospital.location?.lat, hospital.location?.lng)
     }
     
+    private(set) var waitingTime: Int = 0
+    
     init(_ hospital: Hospital) {
         self.hospital = hospital
+    }
+    
+    func calculate(waitingTimeForPainLevel painLevel: PainLevel ) {
+        if let waitingList =  hospital.waitingList?.filter({$0.levelOfPain == painLevel.rawValue}).first {
+            waitingTime = (waitingList.patientCount ?? 0) * (waitingList.averageProcessTime ?? 0)
+            
+        }
     }
 }
