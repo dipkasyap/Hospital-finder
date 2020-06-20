@@ -9,20 +9,14 @@
 import Foundation
 
 class HospitalViewModel {
-   
+
     private var hospital: Hospital!
     
-    var name: String? {
-        return hospital.name
-    }
+    var name: String? { hospital.name }
     
-    var id: Int? {
-         return hospital.id
-     }
+    var id: Int? { return hospital.id }
     
-    var location : (lat: Double?, long:Double?)? {
-        return (hospital.location?.lat, hospital.location?.lng)
-    }
+    var location : (lat: Double?, long:Double?)? { (hospital.location?.lat, hospital.location?.lng) }
     
     private(set) var waitingTime: Int = 0
     

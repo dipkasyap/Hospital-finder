@@ -29,7 +29,7 @@
 		8497BE56249AC6C7006C6FAA /* TableviewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE55249AC6C7006C6FAA /* TableviewCell+Extension.swift */; };
 		8497BE58249ACBA2006C6FAA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE57249ACBA2006C6FAA /* WebService.swift */; };
 		8497BE5A249ACC00006C6FAA /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE59249ACC00006C6FAA /* AppConstants.swift */; };
-		8497BE5C249AD00F006C6FAA /* IllnessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE5B249AD00F006C6FAA /* IllnessModel.swift */; };
+		8497BE5C249AD00F006C6FAA /* IllnessListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE5B249AD00F006C6FAA /* IllnessListModel.swift */; };
 		8497BE5E249AE59D006C6FAA /* IllnessListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE5D249AE59D006C6FAA /* IllnessListViewModel.swift */; };
 		8497BE60249AFDC7006C6FAA /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE5F249AFDC7006C6FAA /* TableView+Extension.swift */; };
 		8497BE67249B05FE006C6FAA /* IllnessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE66249B05FE006C6FAA /* IllnessViewModel.swift */; };
@@ -44,6 +44,13 @@
 		8497BE7F249B4D86006C6FAA /* HospitalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE7E249B4D86006C6FAA /* HospitalViewModel.swift */; };
 		8497BE83249B52E8006C6FAA /* HospitalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497BE81249B52E8006C6FAA /* HospitalCell.swift */; };
 		8497BE84249B52E8006C6FAA /* HospitalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8497BE82249B52E8006C6FAA /* HospitalCell.xib */; };
+		849D553A249D641800E54571 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D5539249D641800E54571 /* MockData.swift */; };
+		849D553D249D64C500E54571 /* Hospitals.json in Resources */ = {isa = PBXBuildFile; fileRef = 849D553C249D64C500E54571 /* Hospitals.json */; };
+		849D553F249D653600E54571 /* Illnesses.json in Resources */ = {isa = PBXBuildFile; fileRef = 849D553E249D653600E54571 /* Illnesses.json */; };
+		AF3D210A249D9E5300FE022D /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D2109249D9E5300FE022D /* TestError.swift */; };
+		AFA82723249CCF94005535A5 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA82722249CCF94005535A5 /* GeneratedMocks.swift */; };
+		AFA82725249CCFE0005535A5 /* IllnessListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA82724249CCFE0005535A5 /* IllnessListViewModelTests.swift */; };
+		AFA82727249CCFF5005535A5 /* HospitalListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA82726249CCFF5005535A5 /* HospitalListViewModelTests.swift */; };
 		B9426CF50C1CE7644656719B /* Pods_Hospital_Finder_Hospital_FinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4740A4E5A30DCCEBA3F1EC3 /* Pods_Hospital_Finder_Hospital_FinderUITests.framework */; };
 		FD1BCEAB3636CBA4E3401882 /* Pods_Hospital_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED4CC9EDAA6DB159733FC02 /* Pods_Hospital_Finder.framework */; };
 /* End PBXBuildFile section */
@@ -98,7 +105,7 @@
 		8497BE55249AC6C7006C6FAA /* TableviewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableviewCell+Extension.swift"; sourceTree = "<group>"; };
 		8497BE57249ACBA2006C6FAA /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		8497BE59249ACC00006C6FAA /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		8497BE5B249AD00F006C6FAA /* IllnessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessModel.swift; sourceTree = "<group>"; };
+		8497BE5B249AD00F006C6FAA /* IllnessListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessListModel.swift; sourceTree = "<group>"; };
 		8497BE5D249AE59D006C6FAA /* IllnessListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessListViewModel.swift; sourceTree = "<group>"; };
 		8497BE5F249AFDC7006C6FAA /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
 		8497BE66249B05FE006C6FAA /* IllnessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessViewModel.swift; sourceTree = "<group>"; };
@@ -113,7 +120,14 @@
 		8497BE7E249B4D86006C6FAA /* HospitalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewModel.swift; sourceTree = "<group>"; };
 		8497BE81249B52E8006C6FAA /* HospitalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalCell.swift; sourceTree = "<group>"; };
 		8497BE82249B52E8006C6FAA /* HospitalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalCell.xib; sourceTree = "<group>"; };
+		849D5539249D641800E54571 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		849D553C249D64C500E54571 /* Hospitals.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Hospitals.json; sourceTree = "<group>"; };
+		849D553E249D653600E54571 /* Illnesses.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Illnesses.json; sourceTree = "<group>"; };
 		8ED4CC9EDAA6DB159733FC02 /* Pods_Hospital_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hospital_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF3D2109249D9E5300FE022D /* TestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		AFA82722249CCF94005535A5 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		AFA82724249CCFE0005535A5 /* IllnessListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessListViewModelTests.swift; sourceTree = "<group>"; };
+		AFA82726249CCFF5005535A5 /* HospitalListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalListViewModelTests.swift; sourceTree = "<group>"; };
 		E59F6035361C52E8500546AF /* Pods-Hospital Finder-Hospital FinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hospital Finder-Hospital FinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hospital Finder-Hospital FinderUITests/Pods-Hospital Finder-Hospital FinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E685331E6CE2CD137E7923B1 /* Pods-Hospital Finder-Hospital FinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hospital Finder-Hospital FinderUITests.release.xcconfig"; path = "Target Support Files/Pods-Hospital Finder-Hospital FinderUITests/Pods-Hospital Finder-Hospital FinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F4740A4E5A30DCCEBA3F1EC3 /* Pods_Hospital_Finder_Hospital_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hospital_Finder_Hospital_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,8 +185,12 @@
 		8418A6F5249C76AE00F46404 /* Hospital FinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				849D553B249D649800E54571 /* Test Resource */,
+				AFA82722249CCF94005535A5 /* GeneratedMocks.swift */,
 				8418A6F6249C76AE00F46404 /* Hospital_FinderTests.swift */,
 				8418A6F8249C76AE00F46404 /* Info.plist */,
+				AFA82724249CCFE0005535A5 /* IllnessListViewModelTests.swift */,
+				AFA82726249CCFF5005535A5 /* HospitalListViewModelTests.swift */,
 			);
 			path = "Hospital FinderTests";
 			sourceTree = "<group>";
@@ -186,19 +204,18 @@
 			path = "Hospital FinderUITests";
 			sourceTree = "<group>";
 		};
-		8418A710249CA14000F46404 /* SeerviceHandller */ = {
+		8418A710249CA14000F46404 /* ServiceHandller */ = {
 			isa = PBXGroup;
 			children = (
 				8418A711249CA14000F46404 /* IllnessListHandling.swift */,
 				8418A712249CA14000F46404 /* HospitalListHandling.swift */,
 			);
-			path = SeerviceHandller;
+			path = ServiceHandller;
 			sourceTree = "<group>";
 		};
 		8497BE23249ABFF9006C6FAA = {
 			isa = PBXGroup;
 			children = (
-				AFA8271A249CC896005535A5 /* Build scripts */,
 				8497BE2E249ABFF9006C6FAA /* Hospital Finder */,
 				8418A6F5249C76AE00F46404 /* Hospital FinderTests */,
 				8418A703249C7B7400F46404 /* Hospital FinderUITests */,
@@ -278,7 +295,7 @@
 		8497BE47249AC098006C6FAA /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				8418A710249CA14000F46404 /* SeerviceHandller */,
+				8418A710249CA14000F46404 /* ServiceHandller */,
 				8497BE57249ACBA2006C6FAA /* WebService.swift */,
 				8418A6EB249C4A0000F46404 /* DBService.swift */,
 			);
@@ -372,7 +389,7 @@
 		8497BE7A249B4C91006C6FAA /* Illness */ = {
 			isa = PBXGroup;
 			children = (
-				8497BE5B249AD00F006C6FAA /* IllnessModel.swift */,
+				8497BE5B249AD00F006C6FAA /* IllnessListModel.swift */,
 			);
 			path = Illness;
 			sourceTree = "<group>";
@@ -395,11 +412,15 @@
 			path = "Hospital Cell";
 			sourceTree = "<group>";
 		};
-		AFA8271A249CC896005535A5 /* Build scripts */ = {
+		849D553B249D649800E54571 /* Test Resource */ = {
 			isa = PBXGroup;
 			children = (
+				AF3D2109249D9E5300FE022D /* TestError.swift */,
+				849D5539249D641800E54571 /* MockData.swift */,
+				849D553C249D64C500E54571 /* Hospitals.json */,
+				849D553E249D653600E54571 /* Illnesses.json */,
 			);
-			name = "Build scripts";
+			path = "Test Resource";
 			sourceTree = "<group>";
 		};
 		FF37AE8DFFD8E60C0481EE88 /* Frameworks */ = {
@@ -464,6 +485,7 @@
 				8497BE29249ABFF9006C6FAA /* Frameworks */,
 				8497BE2A249ABFF9006C6FAA /* Resources */,
 				1664B5F776365D4606A417FF /* [CP] Embed Pods Frameworks */,
+				AFA82721249CCF0F005535A5 /* Cuckoo Script */,
 			);
 			buildRules = (
 			);
@@ -522,6 +544,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849D553F249D653600E54571 /* Illnesses.json in Resources */,
+				849D553D249D64C500E54571 /* Hospitals.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +632,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AFA82721249CCF0F005535A5 /* Cuckoo Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Cuckoo Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/Service/ServiceHandller/IllnessListHandling.swift\" \\\n\"${INPUT_DIR}/Service/ServiceHandller/HospitalListHandling.swift\"\n\n\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+		};
 		B61BC58C3ED555B467D095C2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -671,7 +713,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3D210A249D9E5300FE022D /* TestError.swift in Sources */,
+				AFA82727249CCFF5005535A5 /* HospitalListViewModelTests.swift in Sources */,
 				8418A6F7249C76AE00F46404 /* Hospital_FinderTests.swift in Sources */,
+				AFA82723249CCF94005535A5 /* GeneratedMocks.swift in Sources */,
+				AFA82725249CCFE0005535A5 /* IllnessListViewModelTests.swift in Sources */,
+				849D553A249D641800E54571 /* MockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,7 +752,7 @@
 				8497BE6B249B27DE006C6FAA /* UIView+Extension.swift in Sources */,
 				8497BE30249ABFF9006C6FAA /* AppDelegate.swift in Sources */,
 				8497BE4E249AC385006C6FAA /* StoryboardHelper.swift in Sources */,
-				8497BE5C249AD00F006C6FAA /* IllnessModel.swift in Sources */,
+				8497BE5C249AD00F006C6FAA /* IllnessListModel.swift in Sources */,
 				8497BE6D249B338D006C6FAA /* SelectPainLevelVC.swift in Sources */,
 				8497BE32249ABFF9006C6FAA /* SceneDelegate.swift in Sources */,
 				8497BE7F249B4D86006C6FAA /* HospitalViewModel.swift in Sources */,
