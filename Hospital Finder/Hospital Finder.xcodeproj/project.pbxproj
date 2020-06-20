@@ -85,7 +85,6 @@
 		8418A6F8249C76AE00F46404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8418A702249C7B7400F46404 /* Hospital FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hospital FinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8418A704249C7B7400F46404 /* Hospital_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital_FinderUITests.swift; sourceTree = "<group>"; };
-		8418A706249C7B7400F46404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8418A711249CA14000F46404 /* IllnessListHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllnessListHandling.swift; sourceTree = "<group>"; };
 		8418A712249CA14000F46404 /* HospitalListHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalListHandling.swift; sourceTree = "<group>"; };
 		8497BE2C249ABFF9006C6FAA /* Hospital Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hospital Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				8418A704249C7B7400F46404 /* Hospital_FinderUITests.swift */,
-				8418A706249C7B7400F46404 /* Info.plist */,
 			);
 			path = "Hospital FinderUITests";
 			sourceTree = "<group>";

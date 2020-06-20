@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Hospital Finder/Service/ServiceHandller/HospitalListHandling.swift at 2020-06-20 08:59:26 +0000
+// MARK: - Mocks generated from file: Hospital Finder/Service/ServiceHandller/HospitalListHandling.swift at 2020-06-20 09:08:07 +0000
 
 //
 //  IllnessListHandling
@@ -103,7 +103,7 @@ import Foundation
 }
 
 
-// MARK: - Mocks generated from file: Hospital Finder/Service/ServiceHandller/IllnessListHandling.swift at 2020-06-20 08:59:26 +0000
+// MARK: - Mocks generated from file: Hospital Finder/Service/ServiceHandller/IllnessListHandling.swift at 2020-06-20 09:08:07 +0000
 
 //
 //  IllnessListHandling
