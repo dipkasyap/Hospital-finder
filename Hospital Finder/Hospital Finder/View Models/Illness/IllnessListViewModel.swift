@@ -10,11 +10,11 @@ import Foundation
 import NotificationBannerSwift
 
 class IllnessListViewModel {
-    
+
     private var illnessData: IllnessListModel?
     private(set) var illnesses = [IllnessViewModel]()
 
-    var numbersOfIllness: Int  { self.illnesses.count }
+    var numbersOfIllness: Int { self.illnesses.count }
 
     private let illnessListHandler: IllnessListHandling
 
@@ -22,34 +22,33 @@ class IllnessListViewModel {
         self.illnessListHandler = illnessListHandler
     }
 
-    func illness(forIndex index: Int)-> IllnessViewModel  {
+    func illness(forIndex index: Int) -> IllnessViewModel {
         return self.illnesses[index]
     }
-    
+
     /**
      Calls Illness getter API
      - returns: (success, error?)
      - Parameter then: (success: Bool, error: Error)->())
      */
-    func getIlleness(_ then: @escaping (_:Bool, _:Error?)->()) {
-        illnessListHandler.getIllnesses{ [weak self] (illnessListModel, error) in
+    func getIlleness(_ then: @escaping (_:Bool, _:Error?) -> Void) {
+        illnessListHandler.getIllnesses { [weak self] (illnessListModel, error) in
 
             if let illnessListModel = illnessListModel {
-                
+
                 self?.illnessData = illnessListModel
                 if let illnessModel = illnessListModel.illnesses {
-                    self?.illnesses = illnessModel.map{IllnessViewModel($0)}
+                    self?.illnesses = illnessModel.map {IllnessViewModel($0)}
                 }
                 then(true, nil)
-                
+
             } else {
                 //error
                 let banner = FloatingNotificationBanner(subtitle: error?.localizedDescription, style: .danger)
                 banner.show()
                 then(false, error)
             }
-            
+
         }
     }
 }
-

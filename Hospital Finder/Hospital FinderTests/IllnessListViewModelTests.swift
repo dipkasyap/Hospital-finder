@@ -7,27 +7,89 @@
 //
 
 import XCTest
+import Quick
+import Nimble
+import Cuckoo
 
-class IllnessListViewModelTests: XCTestCase {
+@testable import Hospital_Finder
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+class IllnessListViewModelTests: QuickSpec {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    override func spec() {
+        var testViewModel: IllnessListViewModel!
+        var mockWebService: MockIllnessListHandling!
+        let mockstubIllnessList = MockData().stubIllnessList()
+        var mockIllnesses: [IllnessViewModel] = []
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        describe("IllnessListViewModel test") {
+            beforeEach {
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+                mockIllnesses = mockstubIllnessList!.illnesses!.compactMap({ model -> IllnessViewModel in
+                    return IllnessViewModel(model)
+                })
+
+                mockWebService = MockIllnessListHandling()
+
+                stub(mockWebService) { stub in
+                    when(stub.getIllnesses(anyClosure())).then { (completion) in
+                        completion(mockstubIllnessList, nil)
+                    }
+
+                }
+
+                testViewModel = IllnessListViewModel(withIllnessListHandling: mockWebService)
+            }
+
+            context("when get IllnessViewModel server request succeed ", {
+                beforeEach {
+                    stub(mockWebService) { stub in
+                        when(stub.getIllnesses(anyClosure())).then { (completion) in
+                            completion(mockstubIllnessList, nil)
+                        }
+                    }
+                    testViewModel.getIlleness { (status, error) in
+                        expect(status).to(beTrue())
+                        expect(error).to(beNil())
+                    }
+
+                }
+                it("it completed successfully", closure: {
+                    expect(testViewModel.illnesses).to(equal(mockIllnesses))
+                    verify(mockWebService).getIllnesses(any())
+                })
+
+                it("set proper number of row") {
+                    expect(testViewModel.numbersOfIllness).to(equal(10))
+                }
+                it("return proper row information") {
+                    expect(testViewModel.illness(forIndex: 2)).to(equal(mockIllnesses[2]))
+                }
+            })
+
+            context("when get IllnessViewModel server request failed with error", {
+
+                beforeEach {
+                    stub(mockWebService) { stub in
+                        when(stub.getIllnesses(anyClosure())).then { (completion) in
+                            completion(nil, mockError)
+                        }
+                    }
+                    testViewModel.getIlleness { (status, error) in
+                        expect(status).to(beFalse())
+                        let errorResponse = error as! MockError
+                        expect(errorResponse).to(equal(mockError))
+                    }
+
+                }
+                it("it completed empty list", closure: {
+                    expect(testViewModel.illnesses).to(equal([]))
+                    verify(mockWebService).getIllnesses(any())
+                })
+
+                it("set proper of row to be 0") {
+                    expect(testViewModel.numbersOfIllness).to(equal(0))
+                }
+            })
         }
     }
-
 }

@@ -8,10 +8,10 @@
 
 import Foundation
 
-class IllnessViewModel {
-    let name : String?
-    let id : Int?
-    
+struct IllnessViewModel: Equatable {
+    let name: String?
+    let id: Int?
+
     init(_ illness: Illnesses) {
         name = illness.illness?.name
         id = illness.illness?.id
