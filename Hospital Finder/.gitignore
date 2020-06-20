@@ -85,4 +85,4 @@ build
 !*.xcworkspace/contents.xcworkspacedata
 
 ### Cuckoo-GeneratedMocks ###
-GeneratedMocks.swift
+# GeneratedMocks.swift
