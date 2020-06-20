@@ -14,22 +14,18 @@ class HospitalListViewModel {
     
     private var hospitalData: HospitalListModel?
     private(set) var hospitals = [HospitalViewModel]()
-    
-    var numbersOfHospitals: Int  {
-        return self.hospitals.count
-    }
-    
-    func hospitals(forIndex index: Int)-> HospitalViewModel  {
-          return self.hospitals[index]
-      }
-    
-    private let hospitalListHandler: HospitalListHandler
+    private let hospitalListHandler: HospitalListHandling
 
+    var numbersOfHospitals: Int  { self.hospitals.count }
     
-    init(withHospitalistHandling hospitalListHandler: HospitalListHandler = HospitalListHandler()) {
-          self.hospitalListHandler = hospitalListHandler
-      }
-        
+    init(withHospitalistHandling hospitalListHandler: HospitalListHandling = HospitalListHandler()) {
+        self.hospitalListHandler = hospitalListHandler
+    }
+
+    func hospitals(forIndex index: Int)-> HospitalViewModel  {
+        return self.hospitals[index]
+    }
+
     /**
      Calls Illness getter API
      - returns: (success, error?)
