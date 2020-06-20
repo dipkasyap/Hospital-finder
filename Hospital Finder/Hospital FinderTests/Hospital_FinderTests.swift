@@ -14,11 +14,9 @@ class Hospital_FinderTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
-
     func test_() {
-        
+
     }
-    
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
