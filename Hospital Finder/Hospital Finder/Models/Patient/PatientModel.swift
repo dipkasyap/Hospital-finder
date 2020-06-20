@@ -12,7 +12,7 @@ import Realm
 
 
 class PatientDBModel: Object {
-    //TODO:- id is static for now, need to provide dynamic id based on user info
+    //TODO:- For Project requirement of User info to be stored on db, assuming this requirement is only for skill demo for possible db use, the id is static for now, need to provide dynamic id based on user info if we has more feature on app and storing of user info is require on app side. 
     @objc dynamic var id = 0
     @objc dynamic var painLevel = 0
     @objc dynamic var hospital: HospitalDBModel?
