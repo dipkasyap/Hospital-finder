@@ -12,7 +12,6 @@
 		8418A6E4249C31AB00F46404 /* ProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6E3249C31AB00F46404 /* ProgressHud.swift */; };
 		8418A6EC249C4A0000F46404 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6EB249C4A0000F46404 /* DBService.swift */; };
 		8418A6EE249C4A6C00F46404 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6ED249C4A6C00F46404 /* PatientModel.swift */; };
-		8418A6F7249C76AE00F46404 /* Hospital_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A6F6249C76AE00F46404 /* Hospital_FinderTests.swift */; };
 		8418A705249C7B7400F46404 /* Hospital_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A704249C7B7400F46404 /* Hospital_FinderUITests.swift */; };
 		8418A713249CA14000F46404 /* IllnessListHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A711249CA14000F46404 /* IllnessListHandling.swift */; };
 		8418A714249CA14000F46404 /* HospitalListHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8418A712249CA14000F46404 /* HospitalListHandling.swift */; };
@@ -83,11 +82,9 @@
 		8418A6EB249C4A0000F46404 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
 		8418A6ED249C4A6C00F46404 /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
 		8418A6F4249C76AE00F46404 /* Hospital FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hospital FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8418A6F6249C76AE00F46404 /* Hospital_FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital_FinderTests.swift; sourceTree = "<group>"; };
 		8418A6F8249C76AE00F46404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8418A702249C7B7400F46404 /* Hospital FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hospital FinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8418A704249C7B7400F46404 /* Hospital_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital_FinderUITests.swift; sourceTree = "<group>"; };
-		8418A706249C7B7400F46404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8418A711249CA14000F46404 /* IllnessListHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IllnessListHandling.swift; sourceTree = "<group>"; };
 		8418A712249CA14000F46404 /* HospitalListHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalListHandling.swift; sourceTree = "<group>"; };
 		8497BE2C249ABFF9006C6FAA /* Hospital Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hospital Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,7 +184,6 @@
 			children = (
 				849D553B249D649800E54571 /* Test Resource */,
 				AFA82722249CCF94005535A5 /* GeneratedMocks.swift */,
-				8418A6F6249C76AE00F46404 /* Hospital_FinderTests.swift */,
 				8418A6F8249C76AE00F46404 /* Info.plist */,
 				AFA82724249CCFE0005535A5 /* IllnessListViewModelTests.swift */,
 				AFA82726249CCFF5005535A5 /* HospitalListViewModelTests.swift */,
@@ -199,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				8418A704249C7B7400F46404 /* Hospital_FinderUITests.swift */,
-				8418A706249C7B7400F46404 /* Info.plist */,
 			);
 			path = "Hospital FinderUITests";
 			sourceTree = "<group>";
@@ -715,7 +710,6 @@
 			files = (
 				AF3D210A249D9E5300FE022D /* TestError.swift in Sources */,
 				AFA82727249CCFF5005535A5 /* HospitalListViewModelTests.swift in Sources */,
-				8418A6F7249C76AE00F46404 /* Hospital_FinderTests.swift in Sources */,
 				AFA82723249CCF94005535A5 /* GeneratedMocks.swift in Sources */,
 				AFA82725249CCFE0005535A5 /* IllnessListViewModelTests.swift in Sources */,
 				849D553A249D641800E54571 /* MockData.swift in Sources */,

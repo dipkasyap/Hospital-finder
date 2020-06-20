@@ -9,7 +9,7 @@
 import Foundation
 
 class HospitalViewModel {
-
+    
     private var hospital: Hospital!
     
     var name: String? { hospital.name }

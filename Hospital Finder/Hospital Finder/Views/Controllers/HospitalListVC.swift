@@ -14,7 +14,6 @@ class HospitalListVC: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var illnessInfoLabel: UILabel!
-
     @IBOutlet weak var hospitalsTableView: UITableView!
     private let refreshControl = UIRefreshControl()
     
@@ -106,7 +105,6 @@ extension HospitalListVC {
         MKMapItem.openMaps(with: [destination], launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving])
     }
 }
-
 
 
 //MARK:- Tableview datasource

@@ -11,18 +11,18 @@ import RealmSwift
 import Realm
 
 
-class Patient_DB_Model: Object {
-    //TODO:- id is static for now, need to provide dynamic id based on user info
+class PatientDBModel: Object {
+    //TODO:- For Project requirement of User info to be stored on db, assuming this requirement is only for skill demo for possible db use, the id is static for now, need to provide dynamic id based on user info if we has more feature on app and storing of user info is require on app side. 
     @objc dynamic var id = 0
     @objc dynamic var painLevel = 0
-    @objc dynamic var hospital: Hospital_DB_Model?
-    @objc dynamic var illness: Illness_DB_Model?
+    @objc dynamic var hospital: HospitalDBModel?
+    @objc dynamic var illness: IllnessDBModel?
     
     override static func primaryKey() -> String? {
         return "id"
     }
     
-    convenience init(painLevel: Int, hospital: Hospital_DB_Model, illness: Illness_DB_Model) {
+    convenience init(painLevel: Int, hospital: HospitalDBModel, illness: IllnessDBModel) {
         self.init()
         self.painLevel = painLevel
         self.hospital = hospital
@@ -31,7 +31,7 @@ class Patient_DB_Model: Object {
     
 }
 
-class Hospital_DB_Model: Object {
+class HospitalDBModel: Object {
     @objc dynamic var id = 0
     @objc dynamic var name = ""
     
@@ -43,7 +43,7 @@ class Hospital_DB_Model: Object {
     
 }
 
-class Illness_DB_Model: Object {
+class IllnessDBModel: Object {
     @objc dynamic var id = 0
     @objc dynamic var name = ""
     

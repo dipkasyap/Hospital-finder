@@ -15,17 +15,17 @@ class HospitalListViewModel {
     private var hospitalData: HospitalListModel?
     private(set) var hospitals = [HospitalViewModel]()
     private let hospitalListHandler: HospitalListHandling
-
+    
     var numbersOfHospitals: Int  { self.hospitals.count }
     
     init(withHospitalistHandling hospitalListHandler: HospitalListHandling = HospitalListHandler()) {
         self.hospitalListHandler = hospitalListHandler
     }
-
+    
     func hospitals(forIndex index: Int)-> HospitalViewModel  {
         return self.hospitals[index]
     }
-
+    
     /**
      Calls Illness getter API
      - returns: (success, error?)
