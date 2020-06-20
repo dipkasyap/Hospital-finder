@@ -33,7 +33,6 @@ App Flow:
 - Xcode **11.4.1**(required)
 - Clean `/DerivedData` folder if any and build the project in Xcode
 - Run the pod install `pod install`
-- Run Cuckoo script to Mock your Swift objects `./Cuckoo-GeneratedMocks.sh`
 - Then clean and build the project in Xcode
 
 ## 3rd Party Libraries
