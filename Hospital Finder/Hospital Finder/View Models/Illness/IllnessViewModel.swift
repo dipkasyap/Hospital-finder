@@ -11,6 +11,9 @@ import Foundation
 struct IllnessViewModel: Equatable {
     let name: String?
     let id: Int?
+    var subtitleInfo: String {
+        return  "Illness: \(name ?? "na")"
+    }
     
     init(_ illness: Illnesses) {
         name = illness.illness?.name

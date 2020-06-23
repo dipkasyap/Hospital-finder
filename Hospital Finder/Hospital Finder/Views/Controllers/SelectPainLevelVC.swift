@@ -16,13 +16,13 @@ class SelectPainLevelVC: UIViewController {
     
     private var illnessViewModel: IllnessViewModel!
     private var painLevelViewModel: PainLevelViewModel = PainLevelViewModel()
-
+    
     //MARK:- init
-      class func load(with illnessViewModel: IllnessViewModel)-> SelectPainLevelVC {
-          let vc: SelectPainLevelVC = UIStoryboard(storyboard: .hospital).instantiateViewController()
-          vc.illnessViewModel = illnessViewModel
-          return vc
-      }
+    class func load(with illnessViewModel: IllnessViewModel)-> SelectPainLevelVC {
+        let vc: SelectPainLevelVC = UIStoryboard(storyboard: .hospital).instantiateViewController()
+        vc.illnessViewModel = illnessViewModel
+        return vc
+    }
     
     //MARK:- View cycle
     override func viewDidLoad() {
@@ -30,7 +30,6 @@ class SelectPainLevelVC: UIViewController {
         setupUI()
     }
 }
-
 
 //MARK:- UI Setup
 extension SelectPainLevelVC {
@@ -52,7 +51,7 @@ extension SelectPainLevelVC {
         }
         painLevelViewModel.painLevel = PainLevel(rawValue: sender.tag)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [unowned self] in
+        delay() { [unowned self] in
             self.showHospitals()
         }
         

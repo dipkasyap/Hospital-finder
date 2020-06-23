@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MapKit
+import NotificationBannerSwift
 
 class HospitalListVC: UIViewController {
     
@@ -43,8 +44,7 @@ extension HospitalListVC {
     private func setupUI() {
         title = "Hospitals"
         titleLabel.textColor = AppConstants.Color.titleGray
-        illnessInfoLabel.text = "Illness: \(illnessViewModel.name ?? "na")\nPain level: \(painLevelViewModel.painLevel?.description ?? "na")"
-        
+        illnessInfoLabel.text = illnessViewModel.subtitleInfo + "\n" + painLevelViewModel.subtitleInfo
         hospitalsTableView.register(HospitalCell.self)
         hospitalsTableView.separatorStyle = .none
         hospitalsTableView.estimatedRowHeight = UITableView.automaticDimension
@@ -54,7 +54,6 @@ extension HospitalListVC {
         hospitalsTableView.delegate = self
     }
 }
-
 
 
 //MARK:- Service call
@@ -79,20 +78,24 @@ extension HospitalListVC {
 extension HospitalListVC {
     
     fileprivate func savePatientInfoOnDB(forHospital hospital: HospitalViewModel) {
-        DBService.savePatient(
-            withIllness: illnessViewModel,
-            andPainLevel: painLevelViewModel.painLevel!,
-            forHospital: hospital) { result in
+        
+        DataServiceHandler().save(
+            illnessViewModel,
+            withPainLevel: painLevelViewModel.painLevel!,
+            forHospital: hospital){ [weak self] success in
+                guard let self = self else {return}
                 
-                switch result{
-                case .success:
-                    showOnMap(hospital)
-                    break
-                case .failure:
-                    break
+                if success {
+                    ProgressHud.showSuccessIn(self.view)
+                    delay(0.3) {
+                        self.showOnMap(hospital)
+                    }
+                } else {
+                    FloatingNotificationBanner(subtitle: "Could not save to RealmDB", style: .danger).show()
                 }
         }
     }
+    
     
     fileprivate func showOnMap(_ hospital: HospitalViewModel  ) {
         
@@ -126,7 +129,7 @@ extension HospitalListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.zoomIn()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [unowned self] in
+        delay() { [unowned self] in
             self.savePatientInfoOnDB(forHospital: self.hospitalViewModel.hospitals(forIndex: indexPath.row))
         }
     }

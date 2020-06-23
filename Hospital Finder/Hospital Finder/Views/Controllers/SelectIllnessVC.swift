@@ -75,7 +75,6 @@ extension SelectIllnessVC: UITableViewDataSource {
         let cell: IllnessCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         cell.setupWith(illnessListViewModel.illness(forIndex: indexPath.row))
         return cell
-        
     }
 }
 
@@ -84,17 +83,17 @@ extension SelectIllnessVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.zoomIn()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [unowned self] in
+        delay() { [unowned self] in
             self.checkPainLevel(forIllness: self.illnessListViewModel.illness(forIndex: indexPath.row))
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-         return UITableView.automaticDimension
-     }
-     
-     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-         return 100
-     }
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }
 

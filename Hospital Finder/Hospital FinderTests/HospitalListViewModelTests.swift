@@ -17,57 +17,76 @@ class HospitalListViewModelTests: QuickSpec {
 
     override func spec() {
         var testViewModel: HospitalListViewModel!
-        var mockWebService: MockHospitalListHandling!
-        let mockStubHospitalsList = MockData().stubHospitalsList()
-        var mockHospitalList: [HospitalViewModel] = []
+       
+        var mocHospitalListHandller: MockHospitalListHandling!
+        
+        //read data from json file 
+        let mockStubHospitalsListModel = MockData().stubHospitalsList()
+       
+        //View model from moc models above
+        var mockHospitalListVM: [HospitalViewModel] = []
 
         describe("HospitalListViewModel test") {
             beforeEach {
 
-                mockHospitalList = mockStubHospitalsList!.hospitals!.compactMap({ model -> HospitalViewModel in
+                // sidhai data padheko  json bata jun chai expected value jasto ho
+                // init, populate view model form mock mockStubHospitalsListModel , obtained from json
+                mockHospitalListVM = mockStubHospitalsListModel!.hospitals!.compactMap({ model -> HospitalViewModel in
                     return HospitalViewModel(model)
                 })
-
-                mockWebService = MockHospitalListHandling()
-                stub(mockWebService) { stub in
+                
+                //1
+                // aaba service lai mock garera moc service bata data tanne ani aako result lai assert garne
+                //method call mocking for handler
+                mocHospitalListHandller = MockHospitalListHandling()
+                
+                stub(mocHospitalListHandller) { stub in
                     when(stub.getHospitals(anyClosure())).then { (completion) in
-                        completion(mockStubHospitalsList, nil)
+                        
+                        // service call sake pachhi mathi ko sidhai mock data mo file bata aako data as result pathaune
+                        completion(mockStubHospitalsListModel, nil)
                     }
                 }
 
-                testViewModel = HospitalListViewModel(withHospitalistHandling: mockWebService)
+                // mathi 1 ma vako implementation yaha view model ma use hunchha
+                testViewModel = HospitalListViewModel(withHospitalistHandling: mocHospitalListHandller)
             }
 
             context("when get HospitalViewModel server request succeed ", {
+               
                 beforeEach {
-                    stub(mockWebService) { stub in
-                        when(stub.getHospitals(anyClosure())).then { (completion) in
-                            completion(mockStubHospitalsList, nil)
-                        }
-                    }
+//                    stub(mocHospitalListHandller) { stub in
+//                        when(stub.getHospitals(anyClosure())).then { (completion) in
+//                            completion(mockStubHospitalsListModel, nil)
+//                        }
+//                    }
+                    
                     testViewModel.getHospitals { (status, error) in
                         expect(status).to(beTrue())
                         expect(error).to(beNil())
                     }
 
                 }
+                
                 it("it completed successfully", closure: {
                     for element in testViewModel.hospitals.enumerated() {
                         let (index, item) =  element
-                        let mockHospitalItem = mockHospitalList[index]
+                        
+                        let mockHospitalItem = mockHospitalListVM[index]
+                        
                         expect(item.id).to(equal(mockHospitalItem.id))
                         expect(item.name).to(equal(mockHospitalItem.name))
                         expect(item.location?.lat).to(equal(mockHospitalItem.location?.lat))
                         expect(item.location?.long).to(equal(mockHospitalItem.location?.long))
                     }
-                    verify(mockWebService).getHospitals(any())
+                    verify(mocHospitalListHandller).getHospitals(any())
                 })
 
                 it("set proper number of row") {
                     expect(testViewModel.numbersOfHospitals).to(equal(10))
                 }
                 it("return proper row information") {
-                    let mockHospitalItem = mockHospitalList[2]
+                    let mockHospitalItem = mockHospitalListVM[2]
                     let item = testViewModel.hospitals[2]
                     expect(item.id).to(equal(mockHospitalItem.id))
                     expect(item.name).to(equal(mockHospitalItem.name))
@@ -79,7 +98,7 @@ class HospitalListViewModelTests: QuickSpec {
             context("when get HospitalViewModel server request failed with error", {
 
                 beforeEach {
-                    stub(mockWebService) { stub in
+                    stub(mocHospitalListHandller) { stub in
                         when(stub.getHospitals(anyClosure())).then { (completion) in
                             completion(nil, mockError)
                         }
@@ -93,7 +112,7 @@ class HospitalListViewModelTests: QuickSpec {
                 }
                 it("it completed empty list", closure: {
                     expect(testViewModel.hospitals.count).to(equal(0))
-                    verify(mockWebService).getHospitals(any())
+                    verify(mocHospitalListHandller).getHospitals(any())
                 })
 
                 it("set proper of row to be 0") {
