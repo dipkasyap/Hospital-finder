@@ -3,11 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
+	<dict/>
+	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>Hospital Finder.xcscheme_^#shared#^_</key>
+		<key>8418A6F3249C76AE00F46404</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>12</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8418A701249C7B7400F46404</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8497BE2B249ABFF9006C6FAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

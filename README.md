@@ -8,6 +8,7 @@ A mobile app project to the response of:
 * iOS 13.0+
 * Xcode 11.4.1
 * Swift 5.0
+* Cocoapod 1.9.3(latest) [COCOAPODS](https://cocoapods.org)
 
 ## Objective:
 App Goal:
@@ -31,9 +32,15 @@ App Flow:
 
 - Xcode **11.4.1**(required)
 - Clean `/DerivedData` folder if any and build the project in Xcode
+- Run the pod install `pod install`
+- Then clean and build the project in Xcode
 
 ## 3rd Party Libraries
-
+ - **`COCOAPODS`** - [COCOAPODS](https://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects.
  - **`SVProgressHUD`** - [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD) is used to show loading indicator when app calls api to get data. 
  - **`NotificationBannerSwift`** - [NotificationBannerSwift](https://github.com/Daltron/NotificationBanner) Banner alert, it is used to show alert banner if app encounters error on API fetch. 
  - **`RealmSwift`** - [RealmSwift](https://realm.io/docs/swift/latest) Is Object store DB, it is used to store user info about illness, pain and selected hospital. 
+- **`Quick`** - [Quick/Quick](https://github.com/Quick/Quick) is testing framework in swift
+ - **`Nimble`** - [Quick/Nimble](https://github.com/Quick/Nimble) is Matcher Framework for Swift to pair with Quick
+ - **`Cuckoo`** - [Brightify/Cuckoo](https://github.com/Brightify/Cuckoo) is mocking framework for unit tests in swift 
+
