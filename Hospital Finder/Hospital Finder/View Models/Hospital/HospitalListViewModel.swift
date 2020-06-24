@@ -45,7 +45,11 @@ class HospitalListViewModel {
                 
             } else {
                 //error
-                let banner = FloatingNotificationBanner(subtitle: error?.localizedDescription, style: .danger)
+                var errorMsg = error?.localizedDescription
+                if let customError = error as? NetworkErrors {
+                    errorMsg = customError.errorMsg
+                }
+                let banner = FloatingNotificationBanner(subtitle: errorMsg, style: .danger)
                 banner.show()
                 then(false, error)
             }

@@ -34,7 +34,6 @@ class IllnessListViewModelTests: QuickSpec {
                     when(stub.getIllnesses(anyClosure())).then { (completion) in
                         completion(mockstubIllnessList, nil)
                     }
-
                 }
 
                 testViewModel = IllnessListViewModel(withIllnessListHandling: mockWebService)
@@ -42,6 +41,7 @@ class IllnessListViewModelTests: QuickSpec {
 
             context("when get IllnessViewModel server request succeed ", {
                 beforeEach {
+                    //stub is cuckoo part
                     stub(mockWebService) { stub in
                         when(stub.getIllnesses(anyClosure())).then { (completion) in
                             completion(mockstubIllnessList, nil)
@@ -53,6 +53,8 @@ class IllnessListViewModelTests: QuickSpec {
                     }
 
                 }
+                
+                
                 it("it completed successfully", closure: {
                     expect(testViewModel.illnesses).to(equal(mockIllnesses))
                     verify(mockWebService).getIllnesses(any())

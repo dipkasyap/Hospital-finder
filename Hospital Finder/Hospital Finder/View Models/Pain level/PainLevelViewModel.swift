@@ -10,4 +10,7 @@ import Foundation
 
 class PainLevelViewModel {
     var painLevel: PainLevel?
+    var subtitleInfo: String {
+          return  "Pain level: \(painLevel?.description ?? "na")"
+      }
 }

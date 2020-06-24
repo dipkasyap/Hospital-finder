@@ -15,30 +15,20 @@ enum DBActionResult {
     case failure
 }
 
-class DBService {
+protocol DBSaveable {
+    func savePatient(_ patient: PatientDBModel,  _ then: (_: DBActionResult)->()) 
+}
+
+class DBService: DBSaveable {
     
-    static let realm = try! Realm()
-    
-    private init() { }
-    
+     let realm = try! Realm()
+        
     /// Saves patient info to Realm DB on mobile
     /// - Parameters:
     ///   - patient: Patient_DB_Model
     ///   - then: call back  (_: DBActionResult)->()
-    class func savePatient(
-        withIllness illness: IllnessViewModel,
-        andPainLevel painLevel: PainLevel,
-        forHospital hospital: HospitalViewModel
-        , _ then: (_: DBActionResult)->()) {
-        
-        let hospitalDBObject = HospitalDBModel(id: hospital.id!, name: hospital.name ?? "na")
-        let illnessDBObject = IllnessDBModel(id: illness.id!, name: illness.name ?? "na")
-        
-        let patientInfo = PatientDBModel(
-            painLevel: painLevel.rawValue,
-            hospital: hospitalDBObject,
-            illness: illnessDBObject)
-        
+     func savePatient(_ patient: PatientDBModel,  _ then: (_: DBActionResult)->()) {
+                
         if realm.isInWriteTransaction {
             do {
                 try realm.commitWrite()
@@ -49,7 +39,7 @@ class DBService {
         
         do {
             try realm.write {
-                realm.add(patientInfo, update: .modified)
+                realm.add(patient, update: .modified)
             }
         }
         catch  {
